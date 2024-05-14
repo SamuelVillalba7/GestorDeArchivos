@@ -177,3 +177,108 @@
 	"DetalleVentaArchivo.h"
 	"DetalleVenta.h"
 
+1714744561 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1714744671 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1714695923 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\horario.h
+	<string>
+
+1714694823 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\producto.h
+	<string>
+
+1714695870 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventaarchivo.cpp
+	"DetalleVentaArchivo.h"
+
+1714696955 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1714745460 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1714745535 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+
+1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1714694823 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\fecha.h
+
+1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productoarchivo.cpp
+	"ProductoArchivo.h"
+
+1714694823 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1715653743 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+
+1714839095 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+	"DetalleVenta.h"
+
+1714746294 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1714746296 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1714705076 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventaarchivo.cpp
+	"VentaArchivo.h"
+
+1714704996 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1714842058 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.cpp
+	<iostream>
+	"VentaManager.h"
+
+1714842058 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+
+1715656728 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
+	<iostream>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+
+1714841031 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+

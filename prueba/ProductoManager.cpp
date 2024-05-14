@@ -90,13 +90,13 @@ void ProductoManager::listarPorID(){
     Producto aux;
     int posicion,x,cantidad;
 
-    cout<<"Nombre        "<<"Precio" <<endl;
+    cout<<"Id       Nombre        Precio" <<endl;
 
     for(x=0;x<tam;x++){
         posicion=_archivo.buscarPosicion(vec[x]);
         aux= _archivo.leer(posicion);
 
-        cout<<aux.getNombre()<<"        $" <<aux.getPrecioVenta() <<endl;
+        cout<< aux.getId()<<"        "<<aux.getNombre()<<"        $" <<aux.getPrecioVenta() <<endl;
     }
 
  }

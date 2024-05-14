@@ -38,6 +38,7 @@
 		<Unit filename="DetalleVentaArchivo.h" />
 		<Unit filename="DetalleVentaManager.cpp" />
 		<Unit filename="DetalleVentaManager.h" />
+		<Unit filename="Empleado.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Horario.cpp" />

@@ -15,6 +15,7 @@ using namespace std;
 
 void comprar();
 void listarDetallesVenta(int idVenta);
+void vuelto(float precio);
 
 
 
@@ -34,7 +35,8 @@ int main()
 
 void comprar(){
 
-    int id=1,precio;
+    int id=1;
+    float precio;
 
     Producto producto;
     ProductoArchivo productoArchivo;
@@ -49,7 +51,8 @@ void comprar(){
     cout<<"Ingrese el id de los productos"<<endl;
     cout <<"Ingresando un 0 como id terminara de cargar"<<endl;
     cout <<endl<<endl;
-     cout<<"Nombre        "<<"Precio"<<endl;
+
+    // cout<<"id        Nombre        "<<"Precio"<<endl<<endl;
 
 
     int idVenta=vm.generarId();
@@ -57,12 +60,16 @@ void comprar(){
 
     while(id>0){
 
-
+    cout<<"ingrese id: ";
     cin>>id;
+
+
 
     if(id==0){
         continue;
     }
+
+    system("cls");
 
     int pos;
     pos=productoArchivo.buscarPosicion(id);
@@ -83,7 +90,11 @@ void comprar(){
     detalleArchivo.guardar(detalle);
 
 
-    cout<<producto.getNombre()<<"    "<<producto.getPrecioVenta()<<endl;
+
+    listarDetallesVenta(idVenta);
+
+
+    //cout<<producto.getNombre()<<"    "<<producto.getPrecioVenta()<<endl;
 
 
 
@@ -94,21 +105,52 @@ void comprar(){
 
     //archivo.restarStock();
 
-    cout<<"id :";
+    //cout<<"id :";
 
 
     }
+
+    cout<<endl;
+    cout <<"total a pagar : $"<<precio<<endl;
+    cout<<endl;
     int formaPago;
-    cout<<"Ingrese Forma de pago"<<endl;
-    cout<<"1.Efectivo      2.Tajeta"<<endl;
+     cout<<"1.Efectivo      2.Tajeta"<<endl;
+    cout<<"Ingrese Forma de pago : ";
     cin>>formaPago;
+    cout<<endl;
+
 
 
     Venta venta(idVenta,formaPago,precio );
     ventaArchivo.guardar(venta);
 
 
+    if(formaPago==1){
+
+        vuelto(precio);
+
+    }
+
+    cout<<"ID DE VENTA: "<<idVenta<<endl<<endl;
+
+
 }
+
+    void vuelto(float precio){
+
+    float pago,vuelto;
+
+    cout<<"Con cuanto paga el cliente:  $";
+    cin>> pago;
+
+    vuelto=pago-precio;
+
+    cout<<"el vuelto es:  $"<<vuelto<<endl<<endl;
+
+
+
+    }
+
 
 
 
