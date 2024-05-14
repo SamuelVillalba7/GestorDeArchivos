@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ProyectoLab2(gestorDeArchivos)" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ProyectoLab2(gestorDeArchivos)" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ProyectoLab2(gestorDeArchivos)" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="DetalleVenta.cpp" />
+		<Unit filename="DetalleVenta.h" />
+		<Unit filename="DetalleVentaArchivo.cpp" />
+		<Unit filename="DetalleVentaArchivo.h" />
+		<Unit filename="DetalleVentaManager.cpp" />
+		<Unit filename="DetalleVentaManager.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="Horario.cpp" />
+		<Unit filename="Horario.h" />
+		<Unit filename="Producto.cpp" />
+		<Unit filename="Producto.h" />
+		<Unit filename="ProductoArchivo.cpp" />
+		<Unit filename="ProductoArchivo.h" />
+		<Unit filename="ProductoManager.cpp" />
+		<Unit filename="ProductoManager.h" />
+		<Unit filename="Venta.cpp" />
+		<Unit filename="Venta.h" />
+		<Unit filename="VentaArchivo.cpp" />
+		<Unit filename="VentaArchivo.h" />
+		<Unit filename="VentaManager.cpp" />
+		<Unit filename="VentaManager.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="menus.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

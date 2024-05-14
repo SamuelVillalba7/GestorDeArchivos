@@ -1,0 +1,179 @@
+# depslib dependency file v1.0
+1714499482 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\main.cpp
+	<iostream>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"Venta.h"
+
+1714498458 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1714498459 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1714411025 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\producto.h
+	<string>
+
+1714498458 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\productoarchivo.cpp
+	"ProductoArchivo.h"
+
+1714411121 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1714498457 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+
+1714336844 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1714318030 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\fecha.h
+
+1714336844 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1714317992 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\horario.h
+
+1714482216 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\menus.h
+	"ProductoManager.h"
+
+1714486900 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1714486891 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\venta.h
+	"Fecha.h"
+
+1714484339 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\ventaarchivo.cpp
+	"VentaArchivo.h"
+
+1714484290 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1714499482 c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+
+1714487188 source:c:\users\usuario\desktop\c++ facultad\proyectolab2\proyectolab2(gestordearchivos)\ventamanager.cpp
+	<iostream>
+	"VentaManager.h"
+
+1714695870 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\detalleventaarchivo.cpp
+	"DetalleVentaArchivo.h"
+
+1714696955 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1714744671 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1714695923 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\horario.h
+	<string>
+
+1714694823 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\producto.h
+	<string>
+
+1714744561 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1714694823 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1714694823 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\fecha.h
+
+1714694823 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1714842164 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\main.cpp
+	<iostream>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+
+1714839095 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+	"DetalleVenta.h"
+
+1714694823 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1714841031 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+
+1714842058 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+
+1714704996 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1714746296 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1714694823 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1714694823 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\productoarchivo.cpp
+	"ProductoArchivo.h"
+
+1714842389 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+
+1714746294 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1714705076 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\ventaarchivo.cpp
+	"VentaArchivo.h"
+
+1714842058 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\ventamanager.cpp
+	<iostream>
+	"VentaManager.h"
+
+1714745460 source:c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1714745535 c:\users\villa\desktop\c++\proyectolab2 (gestordearchivos)\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+
