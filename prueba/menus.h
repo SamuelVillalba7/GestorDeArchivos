@@ -56,16 +56,18 @@ while(true){
 
 
 
-void menuInformes(){
+void menuUsuario(){
 
 int x;
 
+
 while(true){
     system("cls");
-    cout<<"MENU INFORMES"<<endl;
+    cout<<"MENU USUARIO"<<endl;
     cout<<"--------------------------------------"<<endl;
-    cout<<"1)RECAUDACION ANUAL"<<endl;
-    cout<<"2)RECAUDACION POR CATEGORIA"<<endl;
+    cout<<"1)CREAR USUARIO"<<endl;
+    cout<<"2)LISTAR USUARIOS"<<endl;
+    cout<<"2)LISTAR USUARIO POR DNI"<<endl;
     cout<<"--------------------------------------"<<endl;
     cout<<"INGRESE OPCION"<<endl;
     cin>>x;
@@ -94,6 +96,93 @@ while(true){
         }
     }
 }
+
+
+
+
+
+void menuUsuario(){
+
+    Usuario usuario;
+    UsuarioManager um;
+    int opc;
+    cout<<"1)INICIAR SESION"<<endl;
+    cout<<"2)REGISTRARSE"<<endl;
+    cin>>opc;
+
+    switch(opc){
+
+    case 1:
+        int sector;
+        usuario=um.iniciarSesion();
+        sector=usuario.getSector();
+
+        if(sector==1){
+
+        }else if(sector==2){
+
+        }
+        else{
+
+        }
+
+
+
+    break;
+
+    case 2:
+        um.cargar();
+    break;
+
+    }
+
+
+
+
+
+
+
+
+
+int x;
+
+
+while(true){
+    system("cls");
+    cout<<"INICIO DE SESION"<<endl;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"1)CREAR USUARIO"<<endl;
+    cout<<"2)LISTAR USUARIOS"<<endl;
+    cout<<"2)LISTAR USUARIO POR DNI"<<endl;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"INGRESE OPCION"<<endl;
+    cin>>x;
+    system("cls");
+
+    switch(x){
+        case 1:
+         //   ingresarProducto();
+        break;
+
+        case 2:
+         //    ingresarStock();
+        break;
+
+        case 3:
+        //     cambiarPrecio();
+        break;
+
+        case 4:
+        //     listarProductos();
+        break;
+
+        case 0:
+            return;
+        break;
+        }
+    }
+}
+
 
 
 
@@ -241,7 +330,7 @@ while(true){
         break;
 
         case 3:
-          menuInformes();
+          menuUsuario();
         break;
 
         case 4:

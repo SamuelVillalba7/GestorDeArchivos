@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstring>
 using namespace std;
 
 #include "ProductoManager.h"
@@ -13,6 +13,7 @@ using namespace std;
 #include "DetalleVenta.h"
 #include "DetalleVentaManager.h"
 
+
 void comprar();
 void listarDetallesVenta(int idVenta);
 void vuelto(float precio);
@@ -22,6 +23,26 @@ void vuelto(float precio);
 
 int main()
 {
+    /*
+    char contrasenia[9],contra[5];
+    string _dni ;
+    int dni;
+   dni=45905856;
+
+    _dni= to_string(dni);
+    strcpy(contrasenia,_dni.c_str());
+    cout <<_dni<<endl;
+    cout <<contrasenia[0]<<endl;
+    cout <<contrasenia[1]<<endl;
+    cout <<contrasenia[2]<<endl;
+    cout <<contrasenia[3]<<endl;
+
+    strcpy(contra,contrasenia);
+
+    cout<<contra<<endl<<endl;
+
+*/
+
 
 
   menuPrincipal();

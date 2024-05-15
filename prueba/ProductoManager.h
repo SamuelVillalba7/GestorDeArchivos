@@ -2,7 +2,7 @@
 #define PRODUCTOMANAGER_H_INCLUDED
 #include "ProductoArchivo.h"
 #include "Producto.h"
-#include "DetalleVenta.h"
+
 
 class ProductoManager{
 
