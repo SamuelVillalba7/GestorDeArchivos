@@ -10,7 +10,7 @@ void UsuarioManager::mostrar(Usuario usuario){
     cout<<"Apellido: "<<usuario.getApellido()<<endl;
     cout<<"Dni: "<<usuario.getDni()<<endl;
     cout<<"Sector: "<<usuario.getSector()<<endl;
-
+    cout<<"Contraseña: "<<usuario.getContrasenia()<<endl;
 
 
 }
@@ -38,7 +38,20 @@ bool UsuarioManager::cargar(){
     usuario.setSector(sector);
 
 
-    cout<<"Contraseña";
+    cout<<"Contraseña: ";
+    cin>>contrasenia;
+    usuario.setContrasenia(contrasenia);
+
+    bool guardo=_archivo.guardar(usuario);
+
+    if(guardo){
+
+        cout<<"Se registro correctamente"<<endl;
+
+    }
+    else{
+        cout<<"no se pudo realizar el registro "<<endl;
+    }
 
 
 
@@ -89,16 +102,18 @@ void UsuarioManager::listarPorDni(){
 
     if(pos<0){
         cout<<"Dni no registrado"<<endl;
-        return;
+        Usuario u;
+        return u;
     }
 
     Usuario aux;
 
     aux=_archivo.leer(pos);
-
     system("cls");
-    int contrasenia;
-    cout<<"Hola"<<aux.getNombre()<<" "<<aux.getApellido()<<endl;
+
+
+    int contrasenia=1;
+    cout<<"Hola "<<aux.getNombre()<<" "<<aux.getApellido()<<endl;
 
     while(contrasenia!=0){
 
@@ -107,6 +122,7 @@ void UsuarioManager::listarPorDni(){
 
 
     if(contrasenia==aux.getContrasenia()){
+        cout<<"Contraseña correcta"<<endl;
         return aux;
     }else{
         cout<<"Contraseña incorrecta"<<endl;

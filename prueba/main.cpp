@@ -14,6 +14,7 @@ using namespace std;
 #include "DetalleVentaManager.h"
 
 
+
 void comprar();
 void listarDetallesVenta(int idVenta);
 void vuelto(float precio);
@@ -45,7 +46,7 @@ int main()
 
 
 
-  menuPrincipal();
+  menuUsuario();
 
 
 

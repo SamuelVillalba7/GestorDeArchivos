@@ -4,13 +4,16 @@
 #include "ProductoManager.h"
 #include "VentaManager.h"
 #include "DetalleVentaManager.h"
+#include "Usuario.h"
+#include "UsuarioManager.h"
 
 using namespace std;
 
 void comprar();
 void listarDetallesVenta(int idVenta);
 
-
+void menuStock();
+void menuVentas();
 
 void menuConfiguracion(){
 
@@ -56,47 +59,6 @@ while(true){
 
 
 
-void menuUsuario(){
-
-int x;
-
-
-while(true){
-    system("cls");
-    cout<<"MENU USUARIO"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"1)CREAR USUARIO"<<endl;
-    cout<<"2)LISTAR USUARIOS"<<endl;
-    cout<<"2)LISTAR USUARIO POR DNI"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"INGRESE OPCION"<<endl;
-    cin>>x;
-    system("cls");
-
-    switch(x){
-        case 1:
-         //   ingresarProducto();
-        break;
-
-        case 2:
-         //    ingresarStock();
-        break;
-
-        case 3:
-        //     cambiarPrecio();
-        break;
-
-        case 4:
-        //     listarProductos();
-        break;
-
-        case 0:
-            return;
-        break;
-        }
-    }
-}
-
 
 
 
@@ -106,84 +68,47 @@ void menuUsuario(){
     Usuario usuario;
     UsuarioManager um;
     int opc;
-    cout<<"1)INICIAR SESION"<<endl;
-    cout<<"2)REGISTRARSE"<<endl;
-    cin>>opc;
 
-    switch(opc){
-
-    case 1:
-        int sector;
-        usuario=um.iniciarSesion();
-        sector=usuario.getSector();
-
-        if(sector==1){
-
-        }else if(sector==2){
-
-        }
-        else{
-
-        }
+    while(true){
+        system("cls");
+        cout<<"--------------------------------------"<<endl;
+        cout<<"1)INICIAR SESION"<<endl;
+        cout<<"2)REGISTRARSE"<<endl;
+        cout<<"0)SALIR"<<endl;
+        cout<<"--------------------------------------"<<endl;
+        cout<<"INGRESE OPCION"<<endl;
+        cin>>opc;
 
 
+        system("cls");
 
-    break;
+        switch(opc){
 
-    case 2:
-        um.cargar();
-    break;
-
-    }
-
-
-
-
-
-
-
-
-
-int x;
-
-
-while(true){
-    system("cls");
-    cout<<"INICIO DE SESION"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"1)CREAR USUARIO"<<endl;
-    cout<<"2)LISTAR USUARIOS"<<endl;
-    cout<<"2)LISTAR USUARIO POR DNI"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"INGRESE OPCION"<<endl;
-    cin>>x;
-    system("cls");
-
-    switch(x){
         case 1:
-         //   ingresarProducto();
+            int sector;
+            usuario=um.iniciarSesion();
+            sector=usuario.getSector();
+
+            if(sector==1){
+                menuStock();
+            }else if(sector==2){
+                menuVentas();
+            }
         break;
 
         case 2:
-         //    ingresarStock();
-        break;
-
-        case 3:
-        //     cambiarPrecio();
-        break;
-
-        case 4:
-        //     listarProductos();
+            um.cargar();
         break;
 
         case 0:
             return;
         break;
+
         }
+    system("pause");
     }
+
 }
-
-
 
 
 
@@ -204,6 +129,7 @@ while(true){
     cout<<"2)LISTAR VENTA POR ID"<<endl;
     cout<<"3)LISTAR VENTA CON DETALLE POR ID"<<endl;
     cout<<"4)LISTAR TODAS LAS VENTAS"<<endl;
+    cout<<"0)SALIR"<<endl;
     cout<<"--------------------------------------"<<endl;
     cout<<"INGRESE OPCION"<<endl;
     cin>>x;
@@ -253,6 +179,7 @@ while(true){
     cout<<"4)INGRESA STOCK DE PRODUCTO REGISTRADO"<<endl;
     cout<<"5)CAMBIAR PRECIO"<<endl;
     cout<<"6)ELIMINAR PRODUCTO"<<endl;
+    cout<<"0)SALIR"<<endl;
     cout<<"--------------------------------------"<<endl;
     cout<<"INGRESE OPCION"<<endl;
     cin>>x;
@@ -315,6 +242,8 @@ while(true){
     cout<<"2)MENU VENTAS"<<endl;
     cout<<"3)INFORMES"<<endl;
     cout<<"4)CONFIGURACION"<<endl;
+
+    cout<<"0)SALIR"<<endl;
     cout<<"--------------------------------------"<<endl;
     cout<<"INGRESE OPCION"<<endl;
     cin>>x;

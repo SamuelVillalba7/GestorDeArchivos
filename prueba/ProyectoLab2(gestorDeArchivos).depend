@@ -264,8 +264,9 @@
 	"VentaArchivo.h"
 	"Venta.h"
 
-1715656728 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
+1715781355 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
 	<iostream>
+	<cstring>
 	"ProductoManager.h"
 	"Producto.h"
 	"menus.h"
@@ -276,10 +277,12 @@
 	"DetalleVenta.h"
 	"DetalleVentaManager.h"
 
-1715708220 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\menus.h
+1715783541 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\menus.h
 	"ProductoManager.h"
 	"VentaManager.h"
 	"DetalleVentaManager.h"
+	"Usuario.h"
+	"UsuarioManager.h"
 
 1715706221 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuario.cpp
 	<iostream>
@@ -296,12 +299,12 @@
 	<string>
 	"Usuario.h"
 
-1715708220 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.cpp
+1715782825 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.cpp
 	<iostream>
 	<cstdlib>
 	"UsuarioManager.h"
 
-1715706294 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.h
+1715740450 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.h
 	"Usuario.h"
 	"UsuarioArchivo.h"
 
