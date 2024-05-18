@@ -14,6 +14,7 @@ class UsuarioArchivo{
 
         bool guardar(Usuario usuario);
         Usuario leer(int posicion);
+        bool modificar(Usuario usuario,int pos);
         int contarRegistros();
         int buscarPosicion(int dni);
 

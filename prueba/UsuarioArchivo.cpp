@@ -21,6 +21,23 @@ bool UsuarioArchivo::guardar(Usuario usuario){
 
 }
 
+
+bool UsuarioArchivo::modificar(Usuario usuario,int pos){
+
+    FILE *p;
+    p = fopen(_nombreArchivo.c_str(), "rb+");
+    if (p == nullptr){return false;}
+
+    fseek(p,sizeof(Usuario)*pos,SEEK_SET);
+
+    bool escribio = fwrite(&usuario, sizeof(Usuario), 1, p);
+    fclose(p);
+    return escribio;
+
+}
+
+
+
 Usuario UsuarioArchivo::leer(int posicion){
 
     FILE *p;

@@ -3,6 +3,7 @@
 
 #include "DetalleVentaArchivo.h"
 #include "DetalleVenta.h"
+#include "ProductoManager.h"
 
 class DetalleVentaManager{
 
@@ -14,10 +15,12 @@ class DetalleVentaManager{
         bool cargar();
         void mostrar(DetalleVenta aux);
         void listarTodos();
-        void listarPorID();
+        void listarPorID(int idVenta);
         int contarRegistrosPorId(int idVenta);
-        void mostrarRegistrosPorId(int idVenta);
         int* cargarVector(int* vec,int idVenta);
+        void listarDetallesVenta(int idVenta);
+
+
 
 };
 

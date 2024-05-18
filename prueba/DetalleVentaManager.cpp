@@ -18,19 +18,19 @@ void DetalleVentaManager::mostrar(DetalleVenta aux){
 
 }
 
-void DetalleVentaManager::listarPorID(){
+void DetalleVentaManager::listarPorID(int idVenta){
 
-    int id;
-    cout << "ID de Venta a buscar: ";
-    cin >> id;
+    int x,cant=_archivo.contarRegistros();
+    DetalleVenta aux;
 
-    int pos = _archivo.buscarPosicion(id);
-    if (pos >= 0){
-        DetalleVenta aux = _archivo.leer(pos);
-        mostrar(aux);
-    }
-    else{
-        cout << "No existe tal ID producto." << endl;
+    for(x=0;x<cant;x++){
+
+        aux=_archivo.leer(x);
+        if(aux.getIdVenta()==idVenta){
+
+            mostrar(aux);
+        }
+
     }
 
 }
@@ -57,7 +57,7 @@ int DetalleVentaManager::contarRegistrosPorId(int idVenta){
 
 int* DetalleVentaManager::cargarVector(int* vec,int idVenta){
 
-    int  x,cont=0, registros= _archivo.contarRegistros();
+    int  x,cont=0, registros=_archivo.contarRegistros();
     DetalleVenta aux;
 
     for(x=0;x<registros;x++){
@@ -76,23 +76,33 @@ int* DetalleVentaManager::cargarVector(int* vec,int idVenta){
 
 
 
-void DetalleVentaManager::mostrarRegistrosPorId(int idVenta){
 
-    int x,cant=_archivo.contarRegistros();
-    DetalleVenta aux;
+  void DetalleVentaManager::listarDetallesVenta(int idVenta){
 
-    for(x=0;x<cant;x++){
+    ProductoManager pm;
 
-        aux=_archivo.leer(x);
-        if(aux.getIdVenta()==idVenta){
+    int cant=contarRegistrosPorId(idVenta);
 
-            ;
-        }
+
+    int *p;
+    p=new int[cant];
+    if(p==NULL){
+        return ;
+    }
+
+    pm.listarVectorDeId(cargarVector(p,idVenta),cant);
+
+
+    delete [] p;
+
 
     }
 
 
-}
+
+
+
+
 
 
 /*
@@ -192,7 +202,7 @@ void DetalleVentaManager::menu(){
                     int id;
                     cout<<"ingrese id"<<endl;
                     cin>>id;
-                   mostrarRegistrosPorId(id);
+                    listarPorID(id);
                 }
                 break;
             case 99:

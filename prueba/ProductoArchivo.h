@@ -13,9 +13,11 @@ class ProductoArchivo{
         ProductoArchivo();
 
         bool guardar(Producto producto);
+        bool modificar(Producto producto, int pos);
         Producto leer(int posicion);
         int contarRegistros();
         int buscarPosicion(int id);
+        int generarId();
 
 
 

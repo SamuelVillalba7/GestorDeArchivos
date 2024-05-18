@@ -1,14 +1,11 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 
 #include "VentaManager.h"
-int VentaManager::generarId(){
-    int id;
-    id=_archivo.contarRegistros();
-    return id+1;
+#include "SucursalManager.h"
 
-}
 
 
 Venta VentaManager::cargar(){
@@ -44,9 +41,11 @@ Venta VentaManager::cargar(){
 
 void VentaManager::mostrar(Venta aux){
 
+    SucursalManager sm;
 
     cout<<"El id es : "<<aux.getId()<<endl;
     cout<<"La precio es : $"<<aux.getPrecio()<<endl;
+    cout<<"Sucursal" <<sm.nombrePorId(aux.getSucursal())<<endl;
 
     cout<<"La forma de pago es : ";
     if(aux.getFormaDePago()==1){

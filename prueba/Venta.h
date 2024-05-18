@@ -9,20 +9,23 @@ class Venta{
         int _id;
         int _formaDePago;
         int _precio;
+        int _sucursal;
         Fecha _fecha;
         Horario _hora;
 
     public:
-        Venta(int id,int formaDePago,int _precio);
+        Venta(int id,int formaDePago,int precio,int sucursal);
         Venta();
 
         void setId(int x);
+        void setSucursal(int x);
         void setFecha(Fecha x);
         void setFormaDePago(int x);
         void setHorario(Horario x);
         void setPrecio(int x);
 
         int getId();
+        int getSucursal();
         Fecha getFecha();
         int getFormaDePago();
         Horario getHora();

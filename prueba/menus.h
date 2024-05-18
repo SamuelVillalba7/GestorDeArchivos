@@ -9,11 +9,11 @@
 
 using namespace std;
 
-void comprar();
+void comprar(int sucursal);
 void listarDetallesVenta(int idVenta);
 
 void menuStock();
-void menuVentas();
+void menuVentas(int sucursal);
 
 void menuConfiguracion(){
 
@@ -67,6 +67,7 @@ void menuUsuario(){
 
     Usuario usuario;
     UsuarioManager um;
+    ProductoManager pm;
     int opc;
 
     while(true){
@@ -90,9 +91,9 @@ void menuUsuario(){
             sector=usuario.getSector();
 
             if(sector==1){
-                menuStock();
+                pm.menu();
             }else if(sector==2){
-                menuVentas();
+                menuVentas(usuario.getSucursal());
             }
         break;
 
@@ -115,7 +116,7 @@ void menuUsuario(){
 
 
 
-void menuVentas(){
+void menuVentas(int sucursal){
 
 int x;
 VentaManager vm;
@@ -137,7 +138,7 @@ while(true){
 
     switch(x){
         case 1:
-          comprar();
+          comprar(sucursal);
         break;
 
         case 2:
@@ -147,7 +148,7 @@ while(true){
         case 3:
             int id;
             id=vm.listarPorID();
-         listarDetallesVenta(id);
+            dm.listarDetallesVenta(id);
 
         break;
 
@@ -163,66 +164,6 @@ while(true){
     }
 }
 
-
-
-void menuStock(){
-
-int x;
-ProductoManager aux;
-while(true){
-    system("cls");
-    cout<<"MENU STOCK"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"1)REGISTRAR NUEVO PRODUCTO"<<endl;
-    cout<<"2)LISTAR PRODUCTO POR ID"<<endl;
-    cout<<"3)LISTAR TODOS LOS PRODUCTOS"<<endl;
-    cout<<"4)INGRESA STOCK DE PRODUCTO REGISTRADO"<<endl;
-    cout<<"5)CAMBIAR PRECIO"<<endl;
-    cout<<"6)ELIMINAR PRODUCTO"<<endl;
-    cout<<"0)SALIR"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"INGRESE OPCION"<<endl;
-    cin>>x;
-    system("cls");
-
-
-    switch(x){
-        case 1:
-            aux.cargar();
-
-        break;
-
-        case 2:
-            aux.listarPorID();
-
-        break;
-
-        case 3:
-            aux.listarTodos();
-
-        break;
-
-        case 4:
-        //     aux.ingresoStock();
-        break;
-
-        case 5:
-        //     aux.cambiarPrecio();
-        break;
-
-        case 6:
-        //     aux.bajaLogica();
-        break;
-
-        case 0:
-            return;
-        break;
-        }
-
-        system("pause");
-
-    }
-}
 
 
 
@@ -251,7 +192,55 @@ while(true){
 
     switch(x){
         case 1:
-           menuStock();
+        //   menuStock();
+        break;
+
+        case 2:
+          //  menuVentas();
+        break;
+
+        case 3:
+          menuUsuario();
+        break;
+
+        case 4:
+            menuConfiguracion();
+        break;
+
+        case 0:
+        return;
+        break;
+
+
+    }
+}
+
+}
+
+
+/*
+void menuPrincipal(){
+
+int x;
+while(true){
+    system("cls");
+    cout<<"MENU DE ENCARGADO"<<endl;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"1) MENU DE STOCK"<<endl;
+    cout<<"2) MENU DE VENTAS"<<endl;
+    cout<<"3) INFORMES"<<endl;
+    cout<<"4) USUARIOS"<<endl;
+    cout<<"5) CONFIGURACION"<<endl;
+
+    cout<<"0)SALIR"<<endl;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"INGRESE OPCION"<<endl;
+    cin>>x;
+    system("cls");
+
+    switch(x){
+        case 1:
+        //   menuStock();
         break;
 
         case 2:
@@ -275,6 +264,10 @@ while(true){
 }
 
 }
+
+
+*/
+
 
 
 #endif // MENUS_H_INCLUDED

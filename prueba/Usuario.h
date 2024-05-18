@@ -7,7 +7,7 @@ class Usuario{
 
     private:
             char _nombre[30],_apellido[30];
-            int _sector,_contrasenia,_dni;
+            int _sector,_contrasenia,_dni,_sucursal;
     public:
             Usuario(string nombre,string apellido, int sector,int contrasenia ,int dni);
             Usuario();
@@ -17,7 +17,9 @@ class Usuario{
             void setSector(int x);
             void setContrasenia(int x);
             void setDni(int x);
+            void setSucursal(int x);
 
+            int getSucursal();
             string getNombre();
             string getApellido();
             int getSector();

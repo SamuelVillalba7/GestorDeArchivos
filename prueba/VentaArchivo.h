@@ -15,6 +15,7 @@ class VentaArchivo{
         Venta leer(int posicion);
         int contarRegistros();
         int buscarPosicion(int id);
+        int generarId();
 
 
 

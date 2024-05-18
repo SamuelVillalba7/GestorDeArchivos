@@ -15,7 +15,7 @@ class UsuarioManager{
         void listarTodos();
         void listarPorDni();
         Usuario iniciarSesion();
-
+        void menuEncargado();
 
 
 

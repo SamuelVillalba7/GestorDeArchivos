@@ -3,13 +3,14 @@
 using namespace std;
 #include "Venta.h"
 
-Venta::Venta(int id,int formaDePago,int precio){
+Venta::Venta(int id,int formaDePago,int precio, int sucursal){
 
      _id=id;
      _fecha=Fecha();
      _formaDePago=formaDePago;
      _precio=precio;
      _hora=Horario();
+     _sucursal=sucursal;
 
 
 }
@@ -59,4 +60,12 @@ int Venta::getFormaDePago(){
 
 int Venta::getPrecio(){
     return _precio;
+}
+void Venta::setSucursal(int x)
+{
+    _sucursal = x;
+}
+int Venta::getSucursal()
+{
+    return _sucursal;
 }

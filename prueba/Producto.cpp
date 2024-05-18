@@ -10,19 +10,19 @@ Producto::Producto(){
     _precioCompra = 0;
     _stock = 0;
     _precioVenta = 0;
-    _tipo = 0;
+    _categoria = 0;
     _estado = true ;
 
 }
 
-Producto::Producto(int id,string nombre, float precioC,float precioV, int stock, int tipo)
+Producto::Producto(int id,string nombre, float precioC,float precioV, int stock, int categoria)
 {
     setId(id);
     setNombre(nombre);
     setPrecioCompra(precioC);
     setPrecioVenta(precioV);
     setStock(stock);
-    setTipo(tipo);
+    setCategoria(categoria);
     setEstado(true);
 
 }
@@ -77,14 +77,17 @@ void Producto::setEstado(bool x){
 
 
 
-void Producto::setTipo(int x)
+void Producto::setCategoria(int x)
 {
-    _tipo = x;
+    _categoria = x;
 }
+
+
 
 void Producto::setId(int x){
     _id = x;
 }
+
 
 string Producto::getNombre(){
     string nombre = _nombre;
@@ -98,9 +101,9 @@ int Producto::getStock(){
     return _stock;
 }
 
-int Producto::getTipo()
+int Producto::getCategoria()
 {
-    return _tipo;
+    return _categoria;
 }
 
 float Producto::getPrecioCompra(){

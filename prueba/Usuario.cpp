@@ -25,6 +25,14 @@ Usuario::Usuario(){
     _contrasenia=0;
     _dni=0;
 }
+void Usuario::setSucursal(int x)
+{
+    _sucursal = x;
+}
+int Usuario::getSucursal()
+{
+    return _sucursal;
+}
 
 void Usuario::setNombre(string x){
     strcpy(_nombre,x.c_str());

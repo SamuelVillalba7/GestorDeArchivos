@@ -1,18 +1,24 @@
 #include "VentaArchivo.h"
 
-VentaArchivo::VentaArchivo(string nombreArchivo){
+VentaArchivo::VentaArchivo(string nombreArchivo)
+{
     _nombreArchivo = nombreArchivo;
 }
 
-VentaArchivo::VentaArchivo(){
+VentaArchivo::VentaArchivo()
+{
     _nombreArchivo = "ventas.dat";
 }
 
-bool VentaArchivo::guardar(Venta aux){
+bool VentaArchivo::guardar(Venta aux)
+{
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "ab");
-    if (p == nullptr){return false;}
+    if (p == nullptr)
+    {
+        return false;
+    }
 
     bool escribio = fwrite(&aux, sizeof(Venta), 1, p);
     fclose(p);
@@ -20,11 +26,13 @@ bool VentaArchivo::guardar(Venta aux){
 
 }
 
-Venta VentaArchivo::leer(int posicion){
+Venta VentaArchivo::leer(int posicion)
+{
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "rb");
-    if (p == nullptr){
+    if (p == nullptr)
+    {
         return Venta();
     }
     Venta aux;
@@ -36,11 +44,13 @@ Venta VentaArchivo::leer(int posicion){
 
 }
 
-int VentaArchivo::contarRegistros(){
+int VentaArchivo::contarRegistros()
+{
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "rb");
-    if (p == nullptr){
+    if (p == nullptr)
+    {
         return 0;
     }
     fseek(p,0,SEEK_END);
@@ -50,17 +60,35 @@ int VentaArchivo::contarRegistros(){
 
 }
 
-int VentaArchivo::buscarPosicion(int id){
+int VentaArchivo::buscarPosicion(int id)
+{
 
     int x, cant = contarRegistros();
 
-    for(x=0; x<cant; x++){
+    for(x=0; x<cant; x++)
+    {
         Venta aux = leer(x);
-        if (id == aux.getId()){
+        if (id == aux.getId())
+        {
             return x;
         }
     }
     return -1;
 
 }
+int VentaArchivo::generarId()
+{
+    int id,cant=contarRegistros();
 
+
+    if(cant>0)
+    {
+        Venta aux=leer(cant-1);
+        id= aux.getId()+1;
+        return id;
+    }
+    else{
+        return 1;
+    }
+
+}

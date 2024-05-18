@@ -189,7 +189,7 @@
 1714695923 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\horario.h
 	<string>
 
-1714694823 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\producto.h
+1716002429 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\producto.h
 	<string>
 
 1714695870 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventaarchivo.cpp
@@ -199,13 +199,14 @@
 	<string>
 	"DetalleVenta.h"
 
-1714745460 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventamanager.cpp
+1715986906 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventamanager.cpp
 	<iostream>
 	"DetalleVentaManager.h"
 
-1714745535 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventamanager.h
+1715986906 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\detalleventamanager.h
 	"DetalleVentaArchivo.h"
 	"DetalleVenta.h"
+	"ProductoManager.h"
 
 1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\fecha.cpp
 	<iostream>
@@ -219,52 +220,55 @@
 	<ctime>
 	"Horario.h"
 
-1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\producto.cpp
+1716001943 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\producto.cpp
 	<iostream>
 	<cstring>
 	"Producto.h"
 
-1714694823 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productoarchivo.cpp
+1715997985 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productoarchivo.cpp
 	"ProductoArchivo.h"
 
-1714694823 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productoarchivo.h
+1715980367 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productoarchivo.h
 	<string>
 	"Producto.h"
 
-1715706202 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productomanager.cpp
+1716002974 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productomanager.cpp
 	<iostream>
 	<cstdlib>
 	"ProductoManager.h"
+	"SucursalManager.h"
 
-1715698601 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productomanager.h
+1715988332 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\productomanager.h
 	"ProductoArchivo.h"
 	"Producto.h"
 
-1714746294 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\venta.cpp
+1716001667 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\venta.cpp
 	<iostream>
 	<cstring>
 	"Venta.h"
 
-1714746296 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\venta.h
+1716001668 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\venta.h
 	"Fecha.h"
 	"Horario.h"
 
-1714705076 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventaarchivo.cpp
+1715997985 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventaarchivo.cpp
 	"VentaArchivo.h"
 
-1714704996 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventaarchivo.h
+1715980367 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventaarchivo.h
 	<string>
 	"Venta.h"
 
-1714842058 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.cpp
+1716002974 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.cpp
 	<iostream>
+	<cstring>
 	"VentaManager.h"
+	"SucursalManager.h"
 
 1714842058 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.h
 	"VentaArchivo.h"
 	"Venta.h"
 
-1715781355 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
+1716002974 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
 	<iostream>
 	<cstring>
 	"ProductoManager.h"
@@ -276,35 +280,61 @@
 	"VentaArchivo.h"
 	"DetalleVenta.h"
 	"DetalleVentaManager.h"
+	"SucursalManager.h"
 
-1715783541 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\menus.h
+1716003130 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\menus.h
 	"ProductoManager.h"
 	"VentaManager.h"
 	"DetalleVentaManager.h"
 	"Usuario.h"
 	"UsuarioManager.h"
 
-1715706221 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuario.cpp
+1716002974 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuario.cpp
 	<iostream>
 	<cstring>
 	"Usuario.h"
 
-1715706165 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuario.h
+1716002974 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuario.h
 	<string>
 
-1715706230 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuarioarchivo.cpp
+1715982302 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuarioarchivo.cpp
 	"UsuarioArchivo.h"
 
-1715706063 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuarioarchivo.h
+1715981389 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuarioarchivo.h
 	<string>
 	"Usuario.h"
 
-1715782825 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.cpp
+1716002974 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.cpp
 	<iostream>
 	<cstdlib>
 	"UsuarioManager.h"
+	"SucursalManager.h"
 
-1715740450 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.h
+1715983760 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\usuariomanager.h
 	"Usuario.h"
 	"UsuarioArchivo.h"
+
+1715997985 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursalarchivo.cpp
+	"SucursalArchivo.h"
+
+1715996867 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursalarchivo.h
+	<string>
+	"Sucursal.h"
+
+1715996793 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursal.h
+	<string>
+
+1715997415 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursal.cpp
+	<iostream>
+	<cstring>
+	"Sucursal.h"
+
+1716001025 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursalmanager.cpp
+	<iostream>
+	<cstdlib>
+	"SucursalManager.h"
+
+1716001026 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursalmanager.h
+	"Sucursal.h"
+	"SucursalArchivo.h"
 

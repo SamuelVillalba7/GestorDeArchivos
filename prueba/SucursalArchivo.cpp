@@ -1,35 +1,35 @@
-#include "ProductoArchivo.h"
+#include "SucursalArchivo.h"
 
-ProductoArchivo::ProductoArchivo(string nombreArchivo){
+SucursalArchivo::SucursalArchivo(string nombreArchivo){
     _nombreArchivo = nombreArchivo;
 }
 
 
-ProductoArchivo::ProductoArchivo(){
-    _nombreArchivo ="productos.dat";
+SucursalArchivo::SucursalArchivo(){
+    _nombreArchivo ="sucursal.dat";
 }
 
-bool ProductoArchivo::guardar(Producto producto){
+bool SucursalArchivo::guardar(Sucursal sucursal){
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "ab");
     if (p == nullptr){return false;}
 
-    bool escribio = fwrite(&producto, sizeof(Producto), 1, p);
+    bool escribio = fwrite(&sucursal, sizeof(Sucursal), 1, p);
     fclose(p);
     return escribio;
 
 }
-bool ProductoArchivo::modificar(Producto producto, int pos){
+bool SucursalArchivo::modificar(Sucursal sucursal, int pos){
 
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "rb+");
     if (p == nullptr){return false;}
 
-    fseek(p,sizeof(Producto)*pos ,SEEK_SET);
+    fseek(p,sizeof(Sucursal)*pos ,SEEK_SET);
 
-    bool escribio = fwrite(&producto, sizeof(Producto), 1, p);
+    bool escribio = fwrite(&sucursal, sizeof(Sucursal), 1, p);
     fclose(p);
     return escribio;
 
@@ -37,22 +37,22 @@ bool ProductoArchivo::modificar(Producto producto, int pos){
 }
 
 
-Producto ProductoArchivo::leer(int posicion){
+Sucursal SucursalArchivo::leer(int posicion){
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "rb");
     if (p == nullptr){
-        return Producto();
+        return Sucursal();
     }
-    Producto aux;
-    fseek(p, posicion*sizeof(Producto), SEEK_SET);
-    fread(&aux, sizeof(Producto), 1, p);
+    Sucursal aux;
+    fseek(p, posicion*sizeof(Sucursal), SEEK_SET);
+    fread(&aux, sizeof(Sucursal), 1, p);
     fclose(p);
     return aux;
 
 }
 
-int ProductoArchivo::contarRegistros(){
+int SucursalArchivo::contarRegistros(){
 
     FILE *p;
     p = fopen(_nombreArchivo.c_str(), "rb");
@@ -62,16 +62,16 @@ int ProductoArchivo::contarRegistros(){
     fseek(p,0,SEEK_END);
     int bytes = ftell(p);
     fclose(p);
-    return bytes / sizeof(Producto);
+    return bytes / sizeof(Sucursal);
 
 }
 
-int ProductoArchivo::buscarPosicion(int id){
+int SucursalArchivo::buscarPosicion(int id){
 
     int x, cant = contarRegistros();
 
     for(x=0; x<cant; x++){
-        Producto aux = leer(x);
+        Sucursal aux = leer(x);
         if (id == aux.getId()){
             return x;
         }
@@ -81,12 +81,12 @@ int ProductoArchivo::buscarPosicion(int id){
 }
 
 
-int ProductoArchivo::generarId(){
+int SucursalArchivo::generarId(){
     int id,cant=contarRegistros();
 
     if(cant>0)
     {
-        Producto aux=leer(cant-1);
+        Sucursal aux=leer(cant-1);
         id= aux.getId()+1;
         return id;
     }

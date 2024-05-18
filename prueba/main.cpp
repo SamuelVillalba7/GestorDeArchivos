@@ -12,6 +12,7 @@ using namespace std;
 #include "VentaArchivo.h"
 #include "DetalleVenta.h"
 #include "DetalleVentaManager.h"
+#include "SucursalManager.h"
 
 
 
@@ -45,7 +46,8 @@ int main()
 */
 
 
-
+    SucursalManager sm;
+    sm.menu();
   menuUsuario();
 
 
@@ -55,17 +57,18 @@ int main()
 
 
 
-void comprar(){
+void comprar(int sucursal){
 
     int id=1;
     float precio;
 
     Producto producto;
     ProductoArchivo productoArchivo;
-
+    DetalleVentaManager dvm;
     DetalleVentaArchivo detalleArchivo;
     VentaManager vm;
     VentaArchivo ventaArchivo;
+    ProductoManager productoManager;
 
 
 
@@ -74,10 +77,8 @@ void comprar(){
     cout <<"Ingresando un 0 como id terminara de cargar"<<endl;
     cout <<endl<<endl;
 
-    // cout<<"id        Nombre        "<<"Precio"<<endl<<endl;
 
-
-    int idVenta=vm.generarId();
+    int idVenta=ventaArchivo.generarId();
 
 
     while(id>0){
@@ -107,28 +108,21 @@ void comprar(){
 
     producto= productoArchivo.leer(pos);
 
-    DetalleVenta detalle(idVenta,producto.getId());
+    bool result=productoManager.restarStock(producto.getId());
 
+    if(!result){
+        cout<<"Pruebe con otro id"<<endl;
+        continue;
+    }
+
+    DetalleVenta detalle(idVenta,producto.getId());
     detalleArchivo.guardar(detalle);
 
 
 
-    listarDetallesVenta(idVenta);
-
-
-    //cout<<producto.getNombre()<<"    "<<producto.getPrecioVenta()<<endl;
-
-
-
+    dvm.listarDetallesVenta(idVenta);
 
     precio+=producto.getPrecioVenta();
-
-
-
-    //archivo.restarStock();
-
-    //cout<<"id :";
-
 
     }
 
@@ -143,12 +137,11 @@ void comprar(){
 
 
 
-    Venta venta(idVenta,formaPago,precio );
+    Venta venta(idVenta,formaPago,precio,sucursal);
     ventaArchivo.guardar(venta);
 
 
     if(formaPago==1){
-
         vuelto(precio);
 
     }
@@ -169,32 +162,6 @@ void comprar(){
 
     cout<<"el vuelto es:  $"<<vuelto<<endl<<endl;
 
-
-
-    }
-
-
-
-
-    void listarDetallesVenta(int idVenta){
-
-    ProductoManager pm;
-    DetalleVentaManager dm;
-
-    int cant;
-    cant=dm.contarRegistrosPorId(idVenta);
-
-
-    int *p;
-    p=new int[cant];
-    if(p==NULL){
-        return ;
-    }
-
-    pm.listarVecDetalles(dm.cargarVector(p,idVenta),cant);
-
-
-    delete p;
 
 
     }

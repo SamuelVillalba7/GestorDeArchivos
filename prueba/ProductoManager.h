@@ -15,8 +15,9 @@ class ProductoManager{
         void mostrar(Producto producto);
         void listarTodos();
         void listarPorID();
-        void listarVecDetalles(int *vec,int tam);
-        int generarId();
+        void listarVectorDeId(int *vec,int tam);
+        void ingresoStock();
+        bool restarStock(int id);
 
 };
 
