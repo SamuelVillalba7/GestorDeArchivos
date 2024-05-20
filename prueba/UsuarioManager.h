@@ -15,8 +15,12 @@ class UsuarioManager{
         void listarTodos();
         void listarPorDni();
         Usuario iniciarSesion();
-        void menuEncargado();
 
+        void menuEncargado(Usuario usuario);
+        void menuCajero(Usuario usuario);
+        void menuDeposito(Usuario usuario);
+        void menuSegunSector(Usuario usuario);
+        void menuInicio();
 
 
 };

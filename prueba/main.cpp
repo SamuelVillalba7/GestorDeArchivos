@@ -13,10 +13,12 @@ using namespace std;
 #include "DetalleVenta.h"
 #include "DetalleVentaManager.h"
 #include "SucursalManager.h"
+#include "UsuarioManager.h"
+#include "Categoria.h"
 
 
 
-void comprar();
+void comprar(Usuario usuario);
 void listarDetallesVenta(int idVenta);
 void vuelto(float precio);
 
@@ -46,9 +48,11 @@ int main()
 */
 
 
-    SucursalManager sm;
-    sm.menu();
-  menuUsuario();
+
+
+
+   UsuarioManager um;
+   //um.menuInicio();
 
 
 
@@ -57,7 +61,7 @@ int main()
 
 
 
-void comprar(int sucursal){
+void comprar(Usuario usuario){
 
     int id=1;
     float precio;
@@ -132,12 +136,17 @@ void comprar(int sucursal){
     int formaPago;
      cout<<"1.Efectivo      2.Tajeta"<<endl;
     cout<<"Ingrese Forma de pago : ";
+
     cin>>formaPago;
     cout<<endl;
 
 
 
-    Venta venta(idVenta,formaPago,precio,sucursal);
+    int sucursal,dni;
+    sucursal = usuario.getSucursal();
+    dni=usuario.getDni();
+
+    Venta venta(idVenta,formaPago,precio,sucursal,dni);
     ventaArchivo.guardar(venta);
 
 

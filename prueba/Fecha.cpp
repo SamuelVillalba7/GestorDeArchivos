@@ -35,6 +35,23 @@ Fecha::Fecha(int dia, int mes, int anio){
 
 }
 
+bool Fecha::mismoDia(Fecha fecha){
+
+    int dia,mes,anio;
+    dia=fecha.getDia();
+    mes=fecha.getMes();
+    anio=fecha.getAnio();
+
+    if(_dia==dia && _mes==mes &&_anio==anio){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+
+
 
 int Fecha::getDia(){
     return _dia;

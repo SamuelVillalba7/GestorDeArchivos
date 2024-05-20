@@ -63,106 +63,9 @@ while(true){
 
 
 
-void menuUsuario(){
-
-    Usuario usuario;
-    UsuarioManager um;
-    ProductoManager pm;
-    int opc;
-
-    while(true){
-        system("cls");
-        cout<<"--------------------------------------"<<endl;
-        cout<<"1)INICIAR SESION"<<endl;
-        cout<<"2)REGISTRARSE"<<endl;
-        cout<<"0)SALIR"<<endl;
-        cout<<"--------------------------------------"<<endl;
-        cout<<"INGRESE OPCION"<<endl;
-        cin>>opc;
-
-
-        system("cls");
-
-        switch(opc){
-
-        case 1:
-            int sector;
-            usuario=um.iniciarSesion();
-            sector=usuario.getSector();
-
-            if(sector==1){
-                pm.menu();
-            }else if(sector==2){
-                menuVentas(usuario.getSucursal());
-            }
-        break;
-
-        case 2:
-            um.cargar();
-        break;
-
-        case 0:
-            return;
-        break;
-
-        }
-    system("pause");
-    }
-
-}
 
 
 
-
-
-
-void menuVentas(int sucursal){
-
-int x;
-VentaManager vm;
-DetalleVentaManager dm;
-
-while(true){
-    system("cls");
-    cout<<"MENU VENTAS "<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"1)REGISTRAR UNA VENTA"<<endl;
-    cout<<"2)LISTAR VENTA POR ID"<<endl;
-    cout<<"3)LISTAR VENTA CON DETALLE POR ID"<<endl;
-    cout<<"4)LISTAR TODAS LAS VENTAS"<<endl;
-    cout<<"0)SALIR"<<endl;
-    cout<<"--------------------------------------"<<endl;
-    cout<<"INGRESE OPCION"<<endl;
-    cin>>x;
-    system("cls");
-
-    switch(x){
-        case 1:
-          comprar(sucursal);
-        break;
-
-        case 2:
-        vm.listarPorID();
-        break;
-
-        case 3:
-            int id;
-            id=vm.listarPorID();
-            dm.listarDetallesVenta(id);
-
-        break;
-
-        case 4:
-        vm.listarTodos();
-        break;
-
-        case 0:
-        return;
-        break;
-        }
-        system("pause");
-    }
-}
 
 
 
@@ -200,7 +103,7 @@ while(true){
         break;
 
         case 3:
-          menuUsuario();
+        //  menuUsuario();
         break;
 
         case 4:

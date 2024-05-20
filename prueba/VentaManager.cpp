@@ -45,7 +45,7 @@ void VentaManager::mostrar(Venta aux){
 
     cout<<"El id es : "<<aux.getId()<<endl;
     cout<<"La precio es : $"<<aux.getPrecio()<<endl;
-    cout<<"Sucursal" <<sm.nombrePorId(aux.getSucursal())<<endl;
+    cout<<"Sucursal : " <<sm.nombrePorId(aux.getSucursal())<<endl;
 
     cout<<"La forma de pago es : ";
     if(aux.getFormaDePago()==1){
@@ -58,12 +58,7 @@ void VentaManager::mostrar(Venta aux){
 
      cout<<"El horario es : " ;
     aux.getHora().mostrar();
-
-
-
-
     cout<<endl;
-
 
 }
 
@@ -72,8 +67,16 @@ int VentaManager::listarPorID(){
     int id;
     cout << "ID de Venta a buscar: ";
     cin >> id;
-     cout<<endl<<endl;
+    cout<<endl<<endl;
 
+    mostrar(id);
+
+
+    return id;
+
+}
+
+void VentaManager::mostrar(int id){
 
     int pos = _archivo.buscarPosicion(id);
     if (pos >= 0){
@@ -83,15 +86,94 @@ int VentaManager::listarPorID(){
     else{
         cout << "No existe tal ID producto." << endl;
     }
-    return id;
-
 }
+
+
+
+
+
 
 void VentaManager::listarTodos(){
     for(int i=0; i<_archivo.contarRegistros(); i++){
        mostrar(_archivo.leer(i));
     }
 }
+
+int VentaManager::contarVentasDelDia(){
+    Fecha hoy;
+    int x,cont=0,cant=_archivo.contarRegistros();
+    Venta aux;
+    for(x=0;x<cant;x++){
+
+        aux=_archivo.leer(x);
+        if(aux.getFecha().mismoDia(hoy)){
+            cont++;
+        }
+
+
+        }
+    return cont;
+}
+
+
+
+
+
+void VentaManager::cargarVecVentaDelDia(int* vec){
+
+    Fecha hoy;
+
+    int x,cont=0,cant=_archivo.contarRegistros();
+
+    Venta aux;
+    for(x=0;x<cant;x++){
+
+        aux=_archivo.leer(x);
+
+        if(aux.getFecha().mismoDia(hoy)){
+            vec[cont]=aux.getId();
+            cont++;
+        }
+    }
+}
+
+
+void VentaManager::cierreDeCaja(Usuario usuario){
+
+    int *vec,cant,x;
+    int dni=usuario.getDni();
+
+    cant=contarVentasDelDia();
+    vec=new int[cant];
+
+    if(vec==NULL){
+        cout<<"error con memoria"<<endl;
+        return;
+    }
+    cargarVecVentaDelDia(vec);
+    Venta aux;
+
+    int pos,acum=0;
+    for(x=0;x<cant;x++){
+
+    pos=_archivo.buscarPosicion(vec[x]);
+    aux=_archivo.leer(pos);
+
+    if(aux.getDniEmpleado()==dni){
+
+        acum+=aux.getPrecio();
+    }
+
+    }
+
+    cout<<"Lo facturado fue "<< acum <<endl;
+
+
+    delete []vec;
+
+
+}
+
 
 void VentaManager::menu(){
 

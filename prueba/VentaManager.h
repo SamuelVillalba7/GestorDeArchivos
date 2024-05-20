@@ -2,6 +2,7 @@
 #define VENTAMANAGER_H_INCLUDED
 #include "VentaArchivo.h"
 #include "Venta.h"
+#include "Usuario.h"
 
 
 class VentaManager{
@@ -13,9 +14,14 @@ class VentaManager{
         void menu();
         Venta cargar();
         void mostrar(Venta aux);
+        void mostrar(int id);
         void listarTodos();
         int listarPorID();
         int generarId();
+        int contarVentasDelDia();
+        void cargarVecVentaDelDia(int* vec);
+        void cierreDeCaja(Usuario usuario);
+
 
 };
 

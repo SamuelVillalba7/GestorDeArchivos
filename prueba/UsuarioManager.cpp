@@ -3,6 +3,11 @@ using namespace std;
 #include <cstdlib>
 #include "UsuarioManager.h"
 #include "SucursalManager.h"
+#include "ProductoManager.h"
+#include "VentaManager.h"
+#include "DetalleVentaManager.h"
+
+void comprar(Usuario usuario);
 
 
 
@@ -62,7 +67,7 @@ bool UsuarioManager::cargar(){
 
 
 
-    cout<<"Sector: ";
+    cout<<"Sector: (1.Cajero 2.Deposito 3.Encargado)";
     cin>>sector;
     usuario.setSector(sector);
 
@@ -166,6 +171,78 @@ void UsuarioManager::listarPorDni(){
  }
 
 
+
+
+
+
+void UsuarioManager::menuInicio(){
+
+    Usuario usuario;
+    int opc;
+
+    while(true){
+        system("cls");
+        cout<<"--------------------------------------"<<endl;
+        cout<<"1)INICIAR SESION"<<endl;
+        cout<<"2)REGISTRARSE"<<endl;
+        cout<<"0)SALIR"<<endl;
+        cout<<"--------------------------------------"<<endl;
+        cout<<"INGRESE OPCION"<<endl;
+        cin>>opc;
+
+
+        system("cls");
+
+        switch(opc){
+
+        case 1:
+            usuario=iniciarSesion();
+            menuSegunSector(usuario);
+        break;
+
+        case 2:
+            cargar();
+        break;
+
+        case 0:
+            return;
+        break;
+
+        }
+    system("pause");
+    }
+
+}
+
+
+
+ void UsuarioManager::menuSegunSector(Usuario usuario){
+
+    int sector=usuario.getSector();
+
+    switch(sector){
+        case 1:
+            menuCajero(usuario);
+        break;
+
+        case 2:
+            menuDeposito(usuario);
+        break;
+
+        case 3:
+           // menuEncargado(usuario);
+        break;
+
+
+    }
+
+
+ }
+
+
+
+
+/*
  void UsuarioManager::menuEncargado(){
 
     int opcion, aux;
@@ -214,4 +291,132 @@ void UsuarioManager::listarPorDni(){
     }
 
 }
+
+*/
+
+void UsuarioManager::menuCajero(Usuario usuario){
+
+
+int x;
+VentaManager vm;
+DetalleVentaManager dm;
+
+while(true){
+    system("cls");
+    cout<<"USUARIO: "<< usuario.getNombre()<<" " << usuario.getApellido()<<endl;
+    cout<<"MENU CAJERO "<<endl;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"1)REGISTRAR UNA VENTA"<<endl;
+    cout<<"2)LISTAR VENTA POR ID"<<endl;
+    cout<<"3)LISTAR VENTA CON DETALLE POR ID"<<endl;
+    cout<<"4)LISTAR TODAS LAS VENTAS"<<endl;
+    cout<<"5)CANTIDAD DE VENTAS"<<endl;
+
+    cout<<"0)SALIR"<<endl;
+    cout<<"--------------------------------------"<<endl;
+    cout<<"INGRESE OPCION"<<endl;
+    cin>>x;
+    system("cls");
+
+    switch(x){
+
+        case 1:
+            comprar(usuario);
+        break;
+
+        case 2:
+        vm.listarPorID();
+        break;
+
+        case 3:
+            int id;
+            id=vm.listarPorID();
+            dm.listarDetallesVenta(id);
+
+        break;
+
+        case 4:
+        vm.listarTodos();
+        break;
+
+        case 5:
+            vm.contarVentasDelDia();
+        break;
+
+        case 6:
+            vm.cierreDeCaja(usuario);
+        break;
+
+        case 0:
+        return;
+        break;
+        }
+        system("pause");
+    }
+}
+
+
+
+
+
+ void UsuarioManager::menuDeposito(Usuario usuario){
+
+    ProductoManager pm;
+
+    int opcion;
+    while (true){
+        system("cls");
+        cout<<"USUARIO: "<< usuario.getNombre()<<" " << usuario.getApellido()<<endl;
+        cout << "MENU PRODUCTOS" << endl;
+        cout << "----------------" << endl;
+        cout << "1) NUEVO PRODUCTO" << endl;
+        cout << "2) LISTAR PRODUCTOS" << endl;
+        cout << "3) LISTAR PRODUCTO x ID" << endl;
+        cout << "4) INGRESA STOCK DE PRODUCTO REGISTRADO" <<endl;
+        cout << "5) CAMBIAR PRECIO" <<endl;
+        cout << "6 )ELIMINAR PRODUCTO" <<endl;
+        cout << "---------------------------" << endl;
+        cout << "0) SALIR" << endl;
+
+        cin >> opcion;
+
+        switch(opcion){
+            case 1:
+                {
+                    pm.cargar();
+                }
+                break;
+            case 2:
+                {
+                   pm.listarTodos();
+                }
+                break;
+            case 3:
+                {
+                   pm.listarPorID();
+                }
+                break;
+            case 4:
+                {
+                   pm.ingresoStock();
+                }
+                break;
+            case 99:
+                cout << _archivo.contarRegistros();
+                break;
+            case 0:
+                return;
+                break;
+            default:
+                cout << "OPCION INCORRECTA" << endl;
+            break;
+        }
+
+        system("pause");
+
+    }
+
+
+}
+
 

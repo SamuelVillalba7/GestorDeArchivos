@@ -18,7 +18,7 @@ class Fecha{
 
         bool validarFecha(Fecha aux);
         bool validar();
-
+        bool mismoDia(Fecha fecha);
         bool bisiesto(int anio);
 
         void agregarDia();
