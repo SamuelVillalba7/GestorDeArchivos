@@ -6,6 +6,7 @@ using namespace std;
 #include "ProductoManager.h"
 #include "VentaManager.h"
 #include "DetalleVentaManager.h"
+#include "CierreDeCajaManager.h"
 
 void comprar(Usuario usuario);
 
@@ -226,11 +227,12 @@ void UsuarioManager::menuInicio(){
         break;
 
         case 2:
+
             menuDeposito(usuario);
         break;
 
         case 3:
-           // menuEncargado(usuario);
+            menuEncargado(usuario);
         break;
 
 
@@ -242,17 +244,17 @@ void UsuarioManager::menuInicio(){
 
 
 
-/*
- void UsuarioManager::menuEncargado(){
 
+ void UsuarioManager::menuEncargado(Usuario usuario){
+    CierreDeCajaManager cm;
     int opcion, aux;
     while (true){
         system("cls");
-        cout << "MENU USUARIOS" << endl;
+        cout << "MENU ENCARGADO" << endl;
         cout << "----------------" << endl;
-        cout << "1) NUEVO USUARIO" << endl;
-        cout << "2) LISTAR USUARIOS" << endl;
-        cout << "3) LISTAR USUARIOS POR DNI" << endl;
+        cout << "1) VERIFICAR CIERRES DE CAJA" << endl;
+        cout << "2) INFORMES" << endl;
+        cout << "3) " << endl;
         cout << "4) PRODUCTIVIDAD DE EMPLEADOS DE CAJA" << endl;
         cout << "3) PRODUCTIVIDAD DE EMPLEADOS DE STOCK" << endl;
         cout << "---------------------------" << endl;
@@ -264,17 +266,17 @@ void UsuarioManager::menuInicio(){
         switch(opcion){
             case 1:
                 {
-                   cargar();
+                  cm.VerificarCierres();
                 }
                 break;
             case 2:
                 {
-                   listarTodos();
+                   cm.listarTodos();
                 }
                 break;
             case 3:
                 {
-                   listarPorDni();
+
                 }
                 break;
 
@@ -292,7 +294,7 @@ void UsuarioManager::menuInicio(){
 
 }
 
-*/
+
 
 void UsuarioManager::menuCajero(Usuario usuario){
 
@@ -336,7 +338,7 @@ while(true){
         break;
 
         case 4:
-        vm.listarTodos();
+            vm.listarTodos();
         break;
 
         case 5:
@@ -362,7 +364,6 @@ while(true){
  void UsuarioManager::menuDeposito(Usuario usuario){
 
     ProductoManager pm;
-
     int opcion;
     while (true){
         system("cls");

@@ -54,9 +54,8 @@ int main()
 
 
    UsuarioManager um;
-   //um.menuInicio();
-    CierreDeCajaManager cm;
-    cm.menu();
+   um.menuInicio();
+
 
 
     return 0;

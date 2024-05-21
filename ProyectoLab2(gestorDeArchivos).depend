@@ -394,3 +394,222 @@
 	"CierreDeCaja.h"
 	"CierreDeCajaArchivo.h"
 
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\categoria.cpp
+	<iostream>
+	<cstring>
+	"Categoria.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\categoria.h
+	<string>
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\categoriaarchivo.cpp
+	"CategoriaArchivo.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\categoriaarchivo.h
+	<string>
+	"Categoria.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\categoriamanager.cpp
+	<iostream>
+	<cstdlib>
+	"CategoriaManager.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\categoriamanager.h
+	"Categoria.h"
+	"CategoriaArchivo.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\cierredecaja.cpp
+	<iostream>
+	"CierreDeCaja.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\cierredecaja.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\fecha.h
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\horario.h
+	<string>
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\cierredecajaarchivo.cpp
+	"CierreDeCajaArchivo.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\cierredecajaarchivo.h
+	<string>
+	"CierreDeCaja.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\producto.h
+	<string>
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\detalleventaarchivo.cpp
+	"DetalleVentaArchivo.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+	"ProductoManager.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1716325302 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\cierredecajamanager.cpp
+	<iostream>
+	"CierreDeCajaManager.h"
+	"SucursalManager.h"
+
+1716325302 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\cierredecajamanager.h
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\sucursalmanager.h
+	"Sucursal.h"
+	"SucursalArchivo.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\sucursal.h
+	<string>
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\sucursalarchivo.h
+	<string>
+	"Sucursal.h"
+
+1716325312 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\main.cpp
+	<iostream>
+	<cstring>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+	"SucursalManager.h"
+	"UsuarioManager.h"
+	"Categoria.h"
+	"CierreDeCajaManager.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"Usuario.h"
+	"UsuarioManager.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+	"Usuario.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\usuario.h
+	<string>
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\usuariomanager.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+
+1716322611 c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\usuarioarchivo.h
+	<string>
+	"Usuario.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\productoarchivo.cpp
+	"ProductoArchivo.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+	"SucursalManager.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\sucursal.cpp
+	<iostream>
+	<cstring>
+	"Sucursal.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\sucursalarchivo.cpp
+	"SucursalArchivo.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\sucursalmanager.cpp
+	<iostream>
+	<cstdlib>
+	"SucursalManager.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\usuario.cpp
+	<iostream>
+	<cstring>
+	"Usuario.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\usuarioarchivo.cpp
+	"UsuarioArchivo.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\ventaarchivo.cpp
+	"VentaArchivo.h"
+
+1716322611 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\ventamanager.cpp
+	<iostream>
+	<cstring>
+	"VentaManager.h"
+	"SucursalManager.h"
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+
+1716325302 source:c:\users\usuario\desktop\c++ facultad\gestordearchivos\prueba\usuariomanager.cpp
+	<iostream>
+	<cstdlib>
+	"UsuarioManager.h"
+	"SucursalManager.h"
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"CierreDeCajaManager.h"
+

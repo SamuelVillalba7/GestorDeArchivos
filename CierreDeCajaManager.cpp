@@ -12,23 +12,20 @@ void CierreDeCajaManager::mostrar(CierreDeCaja cierreDeCaja){
     cout<<"El id es : "<<cierreDeCaja.getId()<<endl;
     cout<<"La sucursal es : "<<sm.nombrePorId(cierreDeCaja.getIdSucursal())<<endl;
     cout<<"El dni del empleado es : "<<cierreDeCaja.getDniEmpleado()<<endl;
-    cout<<"La facturacion es : "<<cierreDeCaja.getFacturacion()<<endl;
+    cout<<"La facturacion fue : $"<<cierreDeCaja.getFacturacion()<<endl;
     cout<<"Fecha : "<<cierreDeCaja.getFecha().toString()<<endl;
     cout<<"Horario : "<<cierreDeCaja.getHora().toString()<<endl;
 
     if(cierreDeCaja.getVerificado()){
 
+        cout<<"La diferencia fue : $"<<cierreDeCaja.getDiferencia()<<endl;
         cout<<"Fue verificado por el encargado"<<endl;
-        cout<<"La diferencia fue"<<cierreDeCaja.getDiferencia()<<endl;
 
     }else{
 
         cout<<"Todavia no fue verificado por el encargado"<<endl;
 
     }
-
-
-
 
 
 
@@ -70,6 +67,52 @@ void CierreDeCajaManager::listarTodos(){
    }
 
 }
+
+
+void CierreDeCajaManager::VerificarCierres(){
+    int id,pos;
+    CierreDeCaja cierre;
+    cout<<"Ingrese el id del cierre de caja para verificar"<<endl;
+    cin>>id;
+
+    // si id es 0 que se muestren los cierres de ese dia sin verificar
+    pos=_archivo.buscarPosicion(id);
+
+    if(pos==-1){
+        cout<<"Cierre de caja inexistente"<<endl;
+        return ;
+    }
+    cierre=_archivo.leer(pos);
+
+    mostrar(cierre);
+    cout<<endl<<endl;
+
+    cout<<"La facturacion concuerda con el dinero en la caja? (1.si 2.no)"<<endl;
+    int opc;
+    cin>>opc;
+
+    if(opc==1){
+
+        cierre.setVerificado(true);
+        _archivo.modificar(cierre,pos);
+    }
+    else{
+
+        cout<<"Cuanta es la diferencia?"<<endl;
+        int diferencia;
+        cin>>diferencia;
+
+
+        cierre.setDiferencia(diferencia);
+         cierre.setVerificado(true);
+         _archivo.modificar(cierre,pos);
+
+    }
+
+
+
+}
+
 
 void CierreDeCajaManager::menu(){
 

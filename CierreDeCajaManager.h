@@ -12,6 +12,9 @@ class CierreDeCajaManager{
         void listarTodos();
         void listarPorID();
         bool IdDisponible(int id);
+        void VerificarCierres();
+        void listarDelDiaSinVerificar();
+
 
 
 
