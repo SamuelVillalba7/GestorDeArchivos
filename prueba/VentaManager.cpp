@@ -5,6 +5,8 @@ using namespace std;
 
 #include "VentaManager.h"
 #include "SucursalManager.h"
+#include "CierreDeCaja.h"
+#include "CierreDeCajaArchivo.h"
 
 
 
@@ -141,7 +143,7 @@ void VentaManager::cargarVecVentaDelDia(int* vec){
 void VentaManager::cierreDeCaja(Usuario usuario){
 
     int *vec,cant,x;
-    int dni=usuario.getDni();
+    int dni=usuario.getDni(), sucursal=usuario.getSucursal();
 
     cant=contarVentasDelDia();
     vec=new int[cant];
@@ -167,6 +169,20 @@ void VentaManager::cierreDeCaja(Usuario usuario){
     }
 
     cout<<"Lo facturado fue "<< acum <<endl;
+
+    CierreDeCajaArchivo archivo;
+    int id=archivo.generarId();
+    CierreDeCaja cierre(id,sucursal,dni,acum);
+    bool guardo =archivo.guardar(cierre);
+
+    if(guardo){
+        cout<<"Guardado y enviado al encargado"<<endl;
+    }
+    else{
+        cout<<"Hubo un error"<<endl;
+    }
+
+
 
 
     delete []vec;

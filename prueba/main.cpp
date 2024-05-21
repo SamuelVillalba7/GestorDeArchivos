@@ -16,6 +16,8 @@ using namespace std;
 #include "UsuarioManager.h"
 #include "Categoria.h"
 
+#include "CierreDeCajaManager.h"
+
 
 
 void comprar(Usuario usuario);
@@ -53,7 +55,8 @@ int main()
 
    UsuarioManager um;
    //um.menuInicio();
-
+    CierreDeCajaManager cm;
+    cm.menu();
 
 
     return 0;

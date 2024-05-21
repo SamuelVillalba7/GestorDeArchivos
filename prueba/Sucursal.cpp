@@ -27,8 +27,8 @@ string Sucursal::getNombre()
 
 }
 
-void Sucursal::setId(int id){
-    _id=id;
+void Sucursal::setId(int x){
+    _id=x;
 }
 
 int Sucursal::getId(){

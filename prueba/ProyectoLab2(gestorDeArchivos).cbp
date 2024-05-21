@@ -38,6 +38,12 @@
 		<Unit filename="CategoriaArchivo.h" />
 		<Unit filename="CategoriaManager.cpp" />
 		<Unit filename="CategoriaManager.h" />
+		<Unit filename="CierreDeCaja.cpp" />
+		<Unit filename="CierreDeCaja.h" />
+		<Unit filename="CierreDeCajaArchivo.cpp" />
+		<Unit filename="CierreDeCajaArchivo.h" />
+		<Unit filename="CierreDeCajaManager.cpp" />
+		<Unit filename="CierreDeCajaManager.h" />
 		<Unit filename="DetalleVenta.cpp" />
 		<Unit filename="DetalleVenta.h" />
 		<Unit filename="DetalleVentaArchivo.cpp" />

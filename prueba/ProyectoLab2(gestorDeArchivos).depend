@@ -258,18 +258,20 @@
 	<string>
 	"Venta.h"
 
-1716076834 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.cpp
+1716321893 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.cpp
 	<iostream>
 	<cstring>
 	"VentaManager.h"
 	"SucursalManager.h"
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
 
 1716076769 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\ventamanager.h
 	"VentaArchivo.h"
 	"Venta.h"
 	"Usuario.h"
 
-1716073076 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
+1716143701 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\main.cpp
 	<iostream>
 	<cstring>
 	"ProductoManager.h"
@@ -283,6 +285,7 @@
 	"DetalleVentaManager.h"
 	"SucursalManager.h"
 	"UsuarioManager.h"
+	"Categoria.h"
 
 1716046809 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\menus.h
 	"ProductoManager.h"
@@ -329,7 +332,7 @@
 1715996793 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursal.h
 	<string>
 
-1715997415 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursal.cpp
+1716259430 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\sucursal.cpp
 	<iostream>
 	<cstring>
 	"Sucursal.h"
@@ -350,4 +353,44 @@
 
 1716142288 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\categoria.h
 	<string>
+
+1716142975 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\categoriaarchivo.cpp
+	"CategoriaArchivo.h"
+
+1716142978 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\categoriaarchivo.h
+	<string>
+	"Categoria.h"
+
+1716143699 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\categoriamanager.cpp
+	<iostream>
+	<cstdlib>
+	"CategoriaManager.h"
+
+1716143698 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\categoriamanager.h
+	"Categoria.h"
+	"CategoriaArchivo.h"
+
+1716319171 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\cierredecaja.cpp
+	<iostream>
+	"CierreDeCaja.h"
+
+1716319177 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\cierredecaja.h
+	"Fecha.h"
+	"Horario.h"
+
+1716320243 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\cierredecajaarchivo.cpp
+	"CierreDeCajaArchivo.h"
+
+1716320251 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\cierredecajaarchivo.h
+	<string>
+	"CierreDeCaja.h"
+
+1716321482 source:c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\cierredecajamanager.cpp
+	<iostream>
+	"CierreDeCajaManager.h"
+	"SucursalManager.h"
+
+1716321377 c:\users\villa\desktop\c++\prueba\gestordearchivos\prueba\cierredecajamanager.h
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
 
