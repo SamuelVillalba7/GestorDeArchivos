@@ -12,16 +12,17 @@ class CierreDeCaja{
         Horario _hora;
         int _idSucursal;
         int _dniEmpleado;
-        int _facturacion;
+        float _facturacion;
         bool _verificado;
-        int _diferencia;
+        float _diferencia;
+        float _ganancia;
 
 
 
     public:
 
         CierreDeCaja();
-        CierreDeCaja(int id,int idSucursal, int dniEmplado , int facturacion);
+        CierreDeCaja(int id,int idSucursal, int dniEmplado , float facturacion , float ganancia);
 
         int getId();
         void setId(int x);
@@ -29,10 +30,12 @@ class CierreDeCaja{
         void setIdSucursal(int x);
         int getDniEmpleado();
         void setDniEmpleado(int x);
-        int getFacturacion();
-        void setFacturacion(int x);
-        int getDiferencia();
-        void setDiferencia(int x);
+        float getFacturacion();
+        void setFacturacion(float x);
+        float getGanancia();
+        void setGanancia(float x);
+        float getDiferencia();
+        void setDiferencia(float x);
         Fecha getFecha();
         void setFecha(Fecha x);
         Horario getHora();

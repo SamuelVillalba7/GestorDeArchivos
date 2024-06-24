@@ -185,7 +185,9 @@ void VentaManager::cierreDeCaja(Usuario usuario){
     cargarVecVentaDelDia(vec);
     Venta aux;
 
-    int pos,acum=0;
+    int pos;
+    float acum=0;
+    float ganancia=0;
     for(x=0;x<cant;x++){
 
     pos=_archivo.buscarPosicion(vec[x]);
@@ -194,6 +196,7 @@ void VentaManager::cierreDeCaja(Usuario usuario){
     if(aux.getDniEmpleado()==dni){
 
         acum+=aux.getPrecio();
+        ganancia+=aux.getGanancia();
     }
 
     }
@@ -202,7 +205,7 @@ void VentaManager::cierreDeCaja(Usuario usuario){
 
     CierreDeCajaArchivo archivo;
     int id=archivo.generarId();
-    CierreDeCaja cierre(id,sucursal,dni,acum);
+    CierreDeCaja cierre(id,sucursal,dni,acum,ganancia);
     bool guardo =archivo.guardar(cierre);
 
     if(guardo){

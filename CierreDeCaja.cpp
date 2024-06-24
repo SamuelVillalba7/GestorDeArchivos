@@ -8,7 +8,7 @@ CierreDeCaja::CierreDeCaja(){
 
 }
 
-CierreDeCaja::CierreDeCaja(int id,int idSucursal, int dniEmplado , int facturacion){
+CierreDeCaja::CierreDeCaja(int id,int idSucursal, int dniEmplado , float facturacion , float ganancia){
     setId(id);
     setDniEmpleado(dniEmplado);
     setFacturacion(facturacion);
@@ -17,6 +17,7 @@ CierreDeCaja::CierreDeCaja(int id,int idSucursal, int dniEmplado , int facturaci
     setVerificado(false);
     setFecha(Fecha());
     setHora(Horario());
+    setGanancia(ganancia);
 
 }
 
@@ -31,10 +32,13 @@ void CierreDeCaja::setIdSucursal(int x){
 void CierreDeCaja::setDniEmpleado(int x){
     _dniEmpleado=x;
 }
-void CierreDeCaja::setDiferencia(int x){
+void CierreDeCaja::setDiferencia(float x){
     _diferencia=x;
 }
-void CierreDeCaja::setFacturacion(int x){
+void CierreDeCaja::setGanancia(float x){
+    _ganancia=x;
+}
+void CierreDeCaja::setFacturacion(float x){
     _facturacion=x;
 }
 void CierreDeCaja::setFecha(Fecha x){
@@ -59,11 +63,14 @@ int CierreDeCaja::getIdSucursal(){
     return _idSucursal;
 }
 
-int CierreDeCaja::getFacturacion(){
+float CierreDeCaja::getFacturacion(){
     return _facturacion;
 }
+float CierreDeCaja::getGanancia(){
+    return _ganancia;
+}
 
-int CierreDeCaja::getDiferencia(){
+float CierreDeCaja::getDiferencia(){
     return _diferencia;
 }
 

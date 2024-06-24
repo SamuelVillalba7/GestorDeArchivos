@@ -8,14 +8,15 @@ class Venta{
     private:
         int _id;
         int _formaDePago;
-        int _precio;
+        float _precio;
+        float _ganancia;
         int _sucursal;
         int _dniEmpleado;
         Fecha _fecha;
         Horario _hora;
 
     public:
-        Venta(int id,int formaDePago,int precio,int sucursal,int dni);
+        Venta(int id,int formaDePago,float precio,int sucursal,int dni , float ganancia);
         Venta();
 
         void setId(int x);
@@ -24,7 +25,8 @@ class Venta{
         void setFecha(Fecha x);
         void setFormaDePago(int x);
         void setHorario(Horario x);
-        void setPrecio(int x);
+        void setPrecio(float x);
+        void setGanancia(float x);
 
         int getId();
         int getDniEmpleado();
@@ -32,7 +34,8 @@ class Venta{
         Fecha getFecha();
         int getFormaDePago();
         Horario getHora();
-        int getPrecio();
+        float getPrecio();
+        float getGanancia();
 
 };
 

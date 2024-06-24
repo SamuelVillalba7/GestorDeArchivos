@@ -46,7 +46,7 @@ int validarNumero(){
     int n;
     cin>>n;
 
-    if(n==false){
+    if(n==false || n < 0){
         return -1;
     }
     return n;

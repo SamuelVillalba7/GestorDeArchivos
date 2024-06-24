@@ -68,7 +68,7 @@ int main()
 void comprar(Usuario usuario){
 
     int id=1;
-    float precio;
+    float precio=0,ganancia=0;
 
     Producto producto;
     ProductoArchivo productoArchivo;
@@ -131,6 +131,7 @@ void comprar(Usuario usuario){
     dvm.listarDetallesVenta(idVenta);
 
     precio+=producto.getPrecioVenta();
+    ganancia+= (producto.getPrecioVenta() - producto.getPrecioCompra());
 
     }
 
@@ -150,7 +151,7 @@ void comprar(Usuario usuario){
     sucursal = usuario.getSucursal();
     dni=usuario.getDni();
 
-    Venta venta(idVenta,formaPago,precio,sucursal,dni);
+    Venta venta(idVenta,formaPago,precio,sucursal,dni,ganancia);
     ventaArchivo.guardar(venta);
 
 

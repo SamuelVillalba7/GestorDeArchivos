@@ -192,17 +192,19 @@ void CierreDeCajaManager::mostrar(CierreDeCaja cierreDeCaja){
     cout<<"La sucursal es : "<<sm.nombrePorId(cierreDeCaja.getIdSucursal())<<endl;
     cout<<"El dni del empleado es : "<<cierreDeCaja.getDniEmpleado()<<endl;
     cout<<"La facturacion fue : $"<<cierreDeCaja.getFacturacion()<<endl;
+    cout<<"La ganancia fue : $"<<cierreDeCaja.getGanancia()<<endl;
     cout<<"Fecha : "<<cierreDeCaja.getFecha().toString()<<endl;
     cout<<"Horario : "<<cierreDeCaja.getHora().toString()<<endl;
+
 
     if(cierreDeCaja.getVerificado()){
 
         cout<<"La diferencia fue : $"<<cierreDeCaja.getDiferencia()<<endl;
-        cout<<"Fue verificado por el encargado"<<endl;
+        cout<<"VERIFICADO"<<endl;
 
     }else{
 
-        cout<<"Todavia no fue verificado por el encargado"<<endl;
+        cout<<"NO VERIFICADO"<<endl;
 
     }
 
@@ -274,8 +276,6 @@ void CierreDeCajaManager::VerificarCierres(){
         }
     }
 
-
-    // si id es 0 que se muestren los cierres de ese dia sin verificar
     pos=_archivo.buscarPosicion(id);
 
     if(pos==-1){
@@ -300,7 +300,8 @@ void CierreDeCajaManager::VerificarCierres(){
     else{
 
         cout<<"Cuanta es la diferencia?"<<endl;
-        int diferencia;
+        cout<<"(Si el dinero es menor poner la cantidad en negativo)"<<endl;
+        float diferencia;
         cin>>diferencia;
 
 

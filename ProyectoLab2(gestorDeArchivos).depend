@@ -1388,3 +1388,281 @@
 	"SucursalArchivo.h"
 	"UsuarioArchivo.h"
 
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\categoria.cpp
+	<iostream>
+	<cstring>
+	"Categoria.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\categoria.h
+	<string>
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\categoriaarchivo.cpp
+	<iostream>
+	"CategoriaArchivo.h"
+
+1718824671 c:\users\villa\desktop\c++\gestordearchivos\categoriaarchivo.h
+	<string>
+	"Categoria.h"
+
+1718631259 source:c:\users\villa\desktop\c++\gestordearchivos\categoriamanager.cpp
+	<iostream>
+	<cstdlib>
+	"CategoriaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\categoriamanager.h
+	"Categoria.h"
+	"CategoriaArchivo.h"
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\cierredecajaarchivo.cpp
+	<iostream>
+	"CierreDeCajaArchivo.h"
+
+1718824678 c:\users\villa\desktop\c++\gestordearchivos\cierredecajaarchivo.h
+	<string>
+	"CierreDeCaja.h"
+
+1719260686 c:\users\villa\desktop\c++\gestordearchivos\cierredecaja.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\fecha.h
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\horario.h
+	<string>
+
+1719155723 source:c:\users\villa\desktop\c++\gestordearchivos\configuracion.cpp
+	<iostream>
+	<cstring>
+	"Configuracion.h"
+
+1719154637 c:\users\villa\desktop\c++\gestordearchivos\configuracion.h
+	"ProductoArchivo.h"
+	"VentaArchivo.h"
+	"DetalleVentaArchivo.h"
+	"CategoriaArchivo.h"
+	"CierreDeCajaArchivo.h"
+	"SucursalArchivo.h"
+	"UsuarioArchivo.h"
+
+1718824669 c:\users\villa\desktop\c++\gestordearchivos\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\producto.h
+	<string>
+
+1718824682 c:\users\villa\desktop\c++\gestordearchivos\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1719267859 c:\users\villa\desktop\c++\gestordearchivos\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1718824676 c:\users\villa\desktop\c++\gestordearchivos\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1718824680 c:\users\villa\desktop\c++\gestordearchivos\sucursalarchivo.h
+	<string>
+	"Sucursal.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\sucursal.h
+	<string>
+
+1718824685 c:\users\villa\desktop\c++\gestordearchivos\usuarioarchivo.h
+	<string>
+	"Usuario.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\usuario.h
+	<string>
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\detalleventaarchivo.cpp
+	<iostream>
+	"DetalleVentaArchivo.h"
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+	"ProductoManager.h"
+
+1718891622 c:\users\villa\desktop\c++\gestordearchivos\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1718604821 source:c:\users\villa\desktop\c++\gestordearchivos\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1719259455 source:c:\users\villa\desktop\c++\gestordearchivos\funcionesextras.cpp
+	<iostream>
+	"FuncionesExtras.h"
+
+1719156590 c:\users\villa\desktop\c++\gestordearchivos\funcionesextras.h
+	<iostream>
+	<algorithm>
+	<cctype>
+	<string>
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1718632897 source:c:\users\villa\desktop\c++\gestordearchivos\informes.cpp
+	<iostream>
+	"Informes.h"
+
+1718632897 c:\users\villa\desktop\c++\gestordearchivos\informes.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+	"UsuarioManager.h"
+	"Producto.h"
+	"ProductoManager.h"
+	"ProductoArchivo.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"VentaManager.h"
+	"CierreDeCajaManager.h"
+
+1718267724 c:\users\villa\desktop\c++\gestordearchivos\usuariomanager.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+
+1718603266 c:\users\villa\desktop\c++\gestordearchivos\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+	"Usuario.h"
+
+1718630256 c:\users\villa\desktop\c++\gestordearchivos\cierredecajamanager.h
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\menus.cpp
+	<iostream>
+	<cstring>
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\productoarchivo.cpp
+	<iostream>
+	"ProductoArchivo.h"
+
+1718900069 source:c:\users\villa\desktop\c++\gestordearchivos\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+	"SucursalManager.h"
+	"FuncionesExtras.h"
+	"CategoriaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\sucursalmanager.h
+	"Sucursal.h"
+	"SucursalArchivo.h"
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\sucursal.cpp
+	<iostream>
+	<cstring>
+	"Sucursal.h"
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\sucursalarchivo.cpp
+	<iostream>
+	"SucursalArchivo.h"
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\sucursalmanager.cpp
+	<iostream>
+	<cstdlib>
+	"SucursalManager.h"
+
+1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\usuario.cpp
+	<iostream>
+	<cstring>
+	"Usuario.h"
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\usuarioarchivo.cpp
+	<iostream>
+	"UsuarioArchivo.h"
+
+1719156779 source:c:\users\villa\desktop\c++\gestordearchivos\usuariomanager.cpp
+	<iostream>
+	<cstdlib>
+	"UsuarioManager.h"
+	"SucursalManager.h"
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"CierreDeCajaManager.h"
+	"Informes.h"
+	"CategoriaManager.h"
+	"FuncionesExtras.h"
+	"Configuracion.h"
+
+1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\ventaarchivo.cpp
+	<iostream>
+	"VentaArchivo.h"
+
+1719267869 source:c:\users\villa\desktop\c++\gestordearchivos\cierredecaja.cpp
+	<iostream>
+	"CierreDeCaja.h"
+
+1719267969 source:c:\users\villa\desktop\c++\gestordearchivos\cierredecajamanager.cpp
+	<iostream>
+	"CierreDeCajaManager.h"
+	"SucursalManager.h"
+
+1719267859 source:c:\users\villa\desktop\c++\gestordearchivos\main.cpp
+	<iostream>
+	<cstring>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"FuncionesExtras.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+	"SucursalManager.h"
+	"UsuarioManager.h"
+	"Categoria.h"
+	"CierreDeCajaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\gestordearchivos\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"Usuario.h"
+	"UsuarioManager.h"
+
+1719267859 source:c:\users\villa\desktop\c++\gestordearchivos\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1719267859 source:c:\users\villa\desktop\c++\gestordearchivos\ventamanager.cpp
+	<iostream>
+	<cstring>
+	"VentaManager.h"
+	"SucursalManager.h"
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+	"FuncionesExtras.h"
+

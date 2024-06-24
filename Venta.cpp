@@ -3,7 +3,7 @@
 using namespace std;
 #include "Venta.h"
 
-Venta::Venta(int id,int formaDePago,int precio, int sucursal,int dni){
+Venta::Venta(int id,int formaDePago,float precio, int sucursal,int dni,float ganancia){
 
      _id=id;
      _fecha=Fecha();
@@ -12,6 +12,7 @@ Venta::Venta(int id,int formaDePago,int precio, int sucursal,int dni){
      _hora=Horario();
      _sucursal=sucursal;
      _dniEmpleado=dni;
+     _ganancia=ganancia;
 
 
 }
@@ -23,13 +24,18 @@ Venta::Venta(int id,int formaDePago,int precio, int sucursal,int dni){
      _hora=Horario();
      _formaDePago=0;
      _precio=0;
-     }
+     _ganancia=0;
+}
 
 void Venta::setId(int x){
     _id=x;
 }
-void Venta::setPrecio(int x){
+void Venta::setPrecio(float x){
     _precio=x;
+}
+
+void Venta::setGanancia(float x){
+    _ganancia=x;
 }
 
 void Venta::setFecha(Fecha x){
@@ -62,9 +68,13 @@ int Venta::getFormaDePago(){
     return _formaDePago;
 }
 
-int Venta::getPrecio(){
+float Venta::getPrecio(){
     return _precio;
 }
+float Venta::getGanancia(){
+    return _ganancia;
+}
+
 void Venta::setSucursal(int x)
 {
     _sucursal = x;
