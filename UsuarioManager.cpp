@@ -7,9 +7,12 @@ using namespace std;
 #include "VentaManager.h"
 #include "DetalleVentaManager.h"
 #include "CierreDeCajaManager.h"
+#include "Informes.h"
+#include "CategoriaManager.h"
+#include "FuncionesExtras.h"
+#include "Configuracion.h"
 
 void comprar(Usuario usuario);
-
 
 
 void UsuarioManager::mostrar(Usuario usuario){
@@ -40,7 +43,11 @@ bool UsuarioManager::cargar(){
     usuario.setApellido(apellido);
 
     cout<<"Dni: ";
-    cin>>dni;
+    dni=validarNumero();
+    if(dni==-1){
+        cout<<"no ingreses letras pelotudo"<<endl;
+        return false;
+    }
     usuario.setDni(dni);
 
         cout<<"Ingrese la Sucursal"<<endl;
@@ -114,13 +121,17 @@ void UsuarioManager::listarPorDni(){
 
    cout<<"Ingrese el dni"<<endl;
    cin>>dni;
-
+   system("cls");
    pos=_archivo.buscarPosicion(dni);
 
    if(pos>=0){
     Usuario aux;
     aux=_archivo.leer(pos);
+    cout << "-------------------------------" << endl;
+    cout << "-------------------------------" << endl;
     mostrar(aux);
+    cout << "-------------------------------" << endl;
+    cout << "-------------------------------" << endl << endl;
    }else{
 
         cout<<"Dni no registrado"<<endl;
@@ -129,6 +140,80 @@ void UsuarioManager::listarPorDni(){
 
 }
 
+void UsuarioManager::listarPorNombre(){
+    string nombre;
+    int cant,x;
+    bool coincidencia = false;
+
+    cout << "Ingrese el nombre a consultar: ";
+    cin >> nombre;
+    system("cls");
+    cant=_archivo.contarRegistros();
+    Usuario aux;
+    cout<<"-------------------------"<<endl;
+    cout<<"-------------------------"<<endl;
+    for(x=0;x<cant;x++){
+        aux=_archivo.leer(x);
+        if(nombre == aux.getNombre()){
+            mostrar(aux);
+            coincidencia = true;
+            cout<<"-------------------------"<<endl;
+            cout<<"-------------------------"<<endl;
+        }
+    }
+    if(!coincidencia){
+        cout << endl << "Sin coincidencias encontradas." << endl << endl;
+        cout<<"-------------------------"<<endl;
+        cout<<"-------------------------"<<endl;
+    }
+}
+
+void UsuarioManager::listarPorRol(){
+    int rol;
+    int cant,x;
+    bool coinc = false;
+
+    cout << "Ingrese el rol a consultar: " << endl;
+    cout << "1) Cajero" << endl;
+    cout << "2) Operario" << endl;
+    cout << "3) Encargado" << endl;
+    cin >> rol;
+    system("cls");
+    if(rol <=0 || rol >3){
+        cout << "ROL INVALIDO" << endl;
+    }
+    else{
+
+        cant=_archivo.contarRegistros();
+        Usuario aux;
+        switch(rol){
+        case 1:
+            {
+                cout << "Empleados del sector de compras: " << endl;
+            }
+        case 2:
+            {
+                cout << "Empleados del sector de deposito:" << endl;
+            }
+        case 3:
+            {
+                cout << "Encargados:" << endl;
+            }
+        }
+        cout<<"-------------------------"<<endl;
+        cout<<"-------------------------"<<endl;
+        for(x=0;x<cant;x++){
+            aux=_archivo.leer(x);
+            if(rol == aux.getSector()){
+                mostrar(aux);
+                coinc = true;
+                cout<<"-------------------------"<<endl;
+                cout<<"-------------------------"<<endl;
+            }
+        }
+        //coincidencia(coincidencia);
+    }
+}
 
  Usuario UsuarioManager::iniciarSesion(){
 
@@ -247,16 +332,23 @@ void UsuarioManager::menuInicio(){
 
  void UsuarioManager::menuEncargado(Usuario usuario){
     CierreDeCajaManager cm;
+    InformesManager im;
+    SucursalManager sm;
+    CategoriaManager cam;
+    Configuracion c;
+
     int opcion, aux;
     while (true){
         system("cls");
         cout << "MENU ENCARGADO" << endl;
         cout << "----------------" << endl;
-        cout << "1) VERIFICAR CIERRES DE CAJA" << endl;
-        cout << "2) INFORMES" << endl;
-        cout << "3) " << endl;
-        cout << "4) PRODUCTIVIDAD DE EMPLEADOS DE CAJA" << endl;
-        cout << "3) PRODUCTIVIDAD DE EMPLEADOS DE STOCK" << endl;
+        cout << "1) MENU CIERRE DE CAJA" << endl;
+        cout << "2) MENU CATEGORIAS" << endl;
+        cout << "3) MENU SUCURSALES" << endl;
+        cout << "4) LISTADO DE INFORMES Y CONSULTAS" << endl;
+        cout << "5) PRODUCTIVIDAD DE EMPLEADOS DE CAJA" << endl;
+        cout << "6) PRODUCTIVIDAD DE EMPLEADOS DE STOCK" << endl;
+        cout << "7) MENU CONFIGURACION" << endl;
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
@@ -264,19 +356,32 @@ void UsuarioManager::menuInicio(){
         system("cls");
 
         switch(opcion){
+
             case 1:
                 {
-                  cm.VerificarCierres();
+                   cm.menu();
                 }
                 break;
             case 2:
                 {
-                   cm.listarTodos();
+                   cam.menu();
                 }
                 break;
             case 3:
                 {
+                   sm.menu();
+                }
+                break;
 
+            case 4:
+                {
+                    im.menuInformes();
+                }
+                break;
+
+                case 7:
+                {
+                    c.menuPrincipal();
                 }
                 break;
 
@@ -313,7 +418,7 @@ while(true){
     cout<<"3)LISTAR VENTA CON DETALLE POR ID"<<endl;
     cout<<"4)LISTAR TODAS LAS VENTAS"<<endl;
     cout<<"5)CANTIDAD DE VENTAS"<<endl;
-
+    cout<<"6)REALIZAR CIERRE DE CAJA"<<endl;
     cout<<"0)SALIR"<<endl;
     cout<<"--------------------------------------"<<endl;
     cout<<"INGRESE OPCION"<<endl;
@@ -375,11 +480,12 @@ while(true){
         cout << "3) LISTAR PRODUCTO x ID" << endl;
         cout << "4) INGRESA STOCK DE PRODUCTO REGISTRADO" <<endl;
         cout << "5) CAMBIAR PRECIO" <<endl;
-        cout << "6 )ELIMINAR PRODUCTO" <<endl;
+        cout << "6) ELIMINAR PRODUCTO" <<endl;
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
         cin >> opcion;
+        system("cls");
 
         switch(opcion){
             case 1:
@@ -400,6 +506,19 @@ while(true){
             case 4:
                 {
                    pm.ingresoStock();
+                }
+                break;
+
+            case 5:
+                {
+                   pm.modificarPrecio();
+                }
+            break;
+
+
+            case 6:
+                {
+                   pm.bajaLogica();
                 }
                 break;
             case 99:

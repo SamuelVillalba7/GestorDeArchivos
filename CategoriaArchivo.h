@@ -17,7 +17,7 @@ class CategoriaArchivo{
         int contarRegistros();
         int buscarPosicion(int id);
         int generarId();
-
+        void vaciarArchivo();
 
 
 };

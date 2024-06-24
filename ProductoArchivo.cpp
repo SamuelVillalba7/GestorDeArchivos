@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "ProductoArchivo.h"
 
 ProductoArchivo::ProductoArchivo(string nombreArchivo){
@@ -8,6 +10,20 @@ ProductoArchivo::ProductoArchivo(string nombreArchivo){
 ProductoArchivo::ProductoArchivo(){
     _nombreArchivo ="productos.dat";
 }
+
+void ProductoArchivo::vaciarArchivo(){
+
+     FILE *farchivo;
+    farchivo=fopen(_nombreArchivo.c_str(),"wb");
+     if (farchivo == nullptr){
+        cout<<"NO SE PUDO ABRIR DEL ARCHIVO"<<endl;
+        return ;
+     }
+
+    fclose(farchivo);
+
+}
+
 
 bool ProductoArchivo::guardar(Producto producto){
 
@@ -94,5 +110,16 @@ int ProductoArchivo::generarId(){
         return 1;
     }
 
+}
+
+bool ProductoArchivo::existeNombre(string nombre) { /// Func que evita que se repitan nombres
+    int cant = contarRegistros();
+    for (int x = 0; x < cant; x++) {
+        Producto aux = leer(x);
+        if (nombre == aux.getNombre()) {
+            return true;
+        }
+    }
+    return false;
 }
 

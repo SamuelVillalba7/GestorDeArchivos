@@ -91,12 +91,12 @@ void CategoriaManager::menu(){
     int opcion, aux;
     while (true){
         system("cls");
-        cout << "MENU SUCURSALES" << endl;
+        cout << "MENU CATEGORIAS" << endl;
         cout << "----------------" << endl;
-        cout << "1) NUEVA SUCURSAL" << endl;
-        cout << "2) LISTAR SUCURSALES" << endl;
-        cout << "3) LISTAR SUCURSAL POR ID" << endl;
-        cout << "4) ELIMINAR SUCURSAL" <<endl;
+        cout << "1) NUEVA CATEGORIA" << endl;
+        cout << "2) LISTAR CATEGORIAS" << endl;
+        cout << "3) LISTAR CATEGORIA POR ID" << endl;
+        cout << "4) ELIMINAR CATEGORIAS" <<endl;
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 

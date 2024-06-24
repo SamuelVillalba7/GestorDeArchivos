@@ -7,7 +7,7 @@ using namespace std;
 #include "menus.h"
 #include "Fecha.h"
 #include "VentaManager.h"
-
+#include "FuncionesExtras.h"
 #include "Venta.h"
 #include "VentaArchivo.h"
 #include "DetalleVenta.h"
@@ -47,15 +47,17 @@ int main()
 
     cout<<contra<<endl<<endl;
 
+
+
+
+
+
 */
-
-
-
-
 
    UsuarioManager um;
    um.menuInicio();
 
+   // validarNumero();
 
 
     return 0;

@@ -44,6 +44,8 @@
 		<Unit filename="CierreDeCajaArchivo.h" />
 		<Unit filename="CierreDeCajaManager.cpp" />
 		<Unit filename="CierreDeCajaManager.h" />
+		<Unit filename="Configuracion.cpp" />
+		<Unit filename="Configuracion.h" />
 		<Unit filename="DetalleVenta.cpp" />
 		<Unit filename="DetalleVenta.h" />
 		<Unit filename="DetalleVentaArchivo.cpp" />
@@ -52,8 +54,12 @@
 		<Unit filename="DetalleVentaManager.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="FuncionesExtras.cpp" />
+		<Unit filename="FuncionesExtras.h" />
 		<Unit filename="Horario.cpp" />
 		<Unit filename="Horario.h" />
+		<Unit filename="Informes.cpp" />
+		<Unit filename="Informes.h" />
 		<Unit filename="Producto.cpp" />
 		<Unit filename="Producto.h" />
 		<Unit filename="ProductoArchivo.cpp" />
@@ -79,6 +85,7 @@
 		<Unit filename="VentaManager.cpp" />
 		<Unit filename="VentaManager.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menus.cpp" />
 		<Unit filename="menus.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

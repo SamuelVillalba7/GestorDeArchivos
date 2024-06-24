@@ -16,6 +16,7 @@ class DetalleVentaArchivo{
         DetalleVenta leer(int posicion);
         int contarRegistros();
         int buscarPosicion(int id);
+        void vaciarArchivo();
 
 
 

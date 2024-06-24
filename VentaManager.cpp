@@ -7,6 +7,7 @@ using namespace std;
 #include "SucursalManager.h"
 #include "CierreDeCaja.h"
 #include "CierreDeCajaArchivo.h"
+#include "FuncionesExtras.h"
 
 
 
@@ -78,6 +79,7 @@ int VentaManager::listarPorID(){
 
 }
 
+
 void VentaManager::mostrar(int id){
 
     int pos = _archivo.buscarPosicion(id);
@@ -117,6 +119,34 @@ int VentaManager::contarVentasDelDia(){
     return cont;
 }
 
+void VentaManager::recaudacionPorDia(){
+    Fecha aux;
+    bool coinc;
+    float recaudacion = 0;
+    cout << "Ingrese una fecha para conocer la recaudacion total del dia." << endl << endl;
+    aux.cargar();
+    system("cls");
+    for(int i=0; i<_archivo.contarRegistros(); i++){
+        Venta auxV = _archivo.leer(i);
+        if(aux.mismoDia(auxV.getFecha())){
+            coinc = true;
+            recaudacion += auxV.getPrecio();
+        }
+    }
+    if(!coinc){
+        system("cls");
+        cout << "-----------------------------" << endl;
+        cout << "No hubieron ventas generadas en el dia de la fecha." << endl;
+        cout << "-----------------------------" << endl;
+    }
+    else{
+        cout << "----------------------------------------------------" << endl;
+        cout << "La recaudacion total del dia ";
+        aux.mostrar();
+        cout << " fue de: $" << recaudacion << endl;
+        cout << "----------------------------------------------------" << endl;
+    }
+}
 
 
 

@@ -5,6 +5,185 @@ using namespace std;
 
 
 
+void CierreDeCajaManager::listarDelDiaSinVerificar(){
+
+    int x,cant;
+    cant= _archivo.contarRegistros();
+    CierreDeCaja aux;
+    Fecha fecha;
+    bool flag = false;
+
+    for(x=0;x<cant;x++){
+        aux= _archivo.leer(x);
+
+
+        if(fecha.mismoDia(aux.getFecha())){
+
+            if(flag==false){
+
+            flag=true;
+            cout <<aux.getId();
+
+
+            }else{
+                cout <<", "<<aux.getId();
+            }
+
+
+
+        }
+
+
+        if(x==cant-1){
+             cout <<"."<<endl;
+        }
+
+
+    }
+
+    if(flag==false){
+         cout <<"NO HAY INFORMES SIN VERIFICAR DE HOY"<<endl;
+    }
+
+
+
+}
+
+
+
+
+void CierreDeCajaManager::listarNoVerificados(){
+
+    cout<<"Los informes sin verificar son: "<<endl;
+    int x,cant;
+
+    cant=_archivo.contarRegistros();
+    CierreDeCaja aux;
+
+    for(x=0;x<cant;x++){
+        aux= _archivo.leer(x);
+
+        if(!aux.getVerificado()){
+            cout<<"------------------------"<<endl;
+            mostrar(aux);
+            cout<<"------------------------"<<endl;
+
+        }
+
+    }
+}
+void CierreDeCajaManager::listarVerificados(){
+
+    cout<<"Los informes sin verificar son: "<<endl;
+    int x,cant;
+
+    cant=_archivo.contarRegistros();
+    CierreDeCaja aux;
+
+    for(x=0;x<cant;x++){
+        aux= _archivo.leer(x);
+
+        if(aux.getVerificado()){
+            cout<<"------------------------"<<endl;
+            mostrar(aux);
+            cout<<"------------------------"<<endl;
+
+        }
+
+    }
+
+}
+
+ int CierreDeCajaManager::cantidadPorMes(int mes){
+     int x,cant,cont=0;
+     cant=_archivo.contarRegistros();
+      CierreDeCaja aux;
+     for(x=0;x<cant;x++){
+
+        aux=_archivo.leer(x);
+
+        if(aux.getFecha().getMes()==mes){
+
+            cont++;
+        }
+
+
+     }
+
+     return cont;
+ }
+
+  void CierreDeCajaManager::cargarVecPorMes(int mes,CierreDeCaja *vec){
+
+    int cant,x,cont=0;
+
+    cant=_archivo.contarRegistros();
+    CierreDeCaja aux;
+
+
+    for(x=0;x<cant;x++){
+
+        aux=_archivo.leer(x);
+
+        if(aux.getFecha().getMes()==mes){
+             vec[cont]=aux;
+             cont++;
+
+        }
+
+
+
+     }
+
+  }
+
+
+
+
+
+void CierreDeCajaManager::facturadoPorMes(){
+    cout<<"ingrese el mes (en numero) "<<endl;
+
+
+
+    int cant,x;
+    CierreDeCaja *vec;
+    cant=cantidadPorMes(6);
+
+    vec=new CierreDeCaja[cant];
+
+    if(vec==NULL){
+        return;
+    }
+
+
+    cargarVecPorMes(6,vec);
+
+    int acum=0;
+    for(x=0;x<cant;x++){
+
+        acum+= vec[x].getFacturacion();
+
+
+    }
+
+
+    cout<<"Lo facturado este mes fue : $"<<acum<<endl;
+
+
+
+
+
+
+    delete []vec;
+
+
+
+}
+
+
+
+
 void CierreDeCajaManager::mostrar(CierreDeCaja cierreDeCaja){
 
     SucursalManager sm;
@@ -73,7 +252,28 @@ void CierreDeCajaManager::VerificarCierres(){
     int id,pos;
     CierreDeCaja cierre;
     cout<<"Ingrese el id del cierre de caja para verificar"<<endl;
+
+    cout<<"Si ingresa 0 se listaran los cierres sin verificar"<<endl;
+
     cin>>id;
+
+    if(id==0){
+
+
+        cout<<"---------------------"<<endl;
+        listarNoVerificados();
+        cout<<"---------------------"<<endl;
+        cin>>id;
+    }
+    bool flag=IdDisponible(id);
+    while(!flag){
+        cout<<"reingrese id"<<endl;
+        cin>>id;
+        if(IdDisponible(id)){
+            flag=true;
+        }
+    }
+
 
     // si id es 0 que se muestren los cierres de ese dia sin verificar
     pos=_archivo.buscarPosicion(id);
@@ -84,6 +284,7 @@ void CierreDeCajaManager::VerificarCierres(){
     }
     cierre=_archivo.leer(pos);
 
+    system("cls");
     mostrar(cierre);
     cout<<endl<<endl;
 
@@ -119,12 +320,12 @@ void CierreDeCajaManager::menu(){
     int opcion, aux;
     while (true){
         system("cls");
-        cout << "MENU SUCURSALES" << endl;
+        cout << "MENU CIERRE DE CAJA" << endl;
         cout << "----------------" << endl;
-        cout << "1) NUEVA SUCURSAL" << endl;
-        cout << "2) LISTAR SUCURSALES" << endl;
-        cout << "3) LISTAR SUCURSAL POR ID" << endl;
-        cout << "4) ELIMINAR SUCURSAL" <<endl;
+        cout << "1) LISTAR CIERRES DE CAJA" << endl;
+        cout << "2) LISTAR CIERRES DE CAJA SIN VERIFICAR" << endl;
+        cout << "3) LISTAR CIERRES DE CAJA VERIFICADOS" << endl;
+        cout << "4) VERIFICAR CIERRES DE CAJA POR ID" << endl;
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
@@ -134,22 +335,22 @@ void CierreDeCajaManager::menu(){
         switch(opcion){
             case 1:
                 {
-                   //cargar();
+                    listarTodos();
                 }
                 break;
             case 2:
                 {
-                   listarTodos();
+                   listarNoVerificados();
                 }
                 break;
             case 3:
                 {
-                   listarPorID();
+                   listarVerificados();
                 }
                 break;
             case 4:
                 {
-
+                    VerificarCierres();
                 }
                 break;
             case 99:

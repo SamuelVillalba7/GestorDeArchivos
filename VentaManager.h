@@ -16,6 +16,7 @@ class VentaManager{
         void mostrar(Venta aux);
         void mostrar(int id);
         void listarTodos();
+        void recaudacionPorDia();
         int listarPorID();
         int generarId();
         int contarVentasDelDia();

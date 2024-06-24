@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "SucursalArchivo.h"
 
 SucursalArchivo::SucursalArchivo(string nombreArchivo){
@@ -8,6 +10,21 @@ SucursalArchivo::SucursalArchivo(string nombreArchivo){
 SucursalArchivo::SucursalArchivo(){
     _nombreArchivo ="sucursal.dat";
 }
+
+void SucursalArchivo::vaciarArchivo(){
+
+     FILE *farchivo;
+    farchivo=fopen(_nombreArchivo.c_str(),"wb");
+     if (farchivo == nullptr){
+        cout<<"NO SE PUDO ABRIR DEL ARCHIVO"<<endl;
+        return ;
+     }
+
+    fclose(farchivo);
+
+}
+
+
 
 bool SucursalArchivo::guardar(Sucursal sucursal){
 

@@ -14,6 +14,8 @@ class UsuarioManager{
         bool cargar();
         void listarTodos();
         void listarPorDni();
+        void listarPorNombre();
+        void listarPorRol();
         Usuario iniciarSesion();
 
         void menuEncargado(Usuario usuario);
@@ -21,6 +23,7 @@ class UsuarioManager{
         void menuDeposito(Usuario usuario);
         void menuSegunSector(Usuario usuario);
         void menuInicio();
+
 
 
 };

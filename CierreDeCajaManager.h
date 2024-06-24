@@ -16,7 +16,11 @@ class CierreDeCajaManager{
         void listarDelDiaSinVerificar();
 
 
-
+        void listarNoVerificados();
+        void listarVerificados();
+        int cantidadPorMes(int mes);
+        void cargarVecPorMes(int mes,CierreDeCaja *vec);
+        void facturadoPorMes();
 
 };
 

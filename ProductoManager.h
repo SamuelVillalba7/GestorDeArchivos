@@ -15,9 +15,15 @@ class ProductoManager{
         void mostrar(Producto producto);
         void listarTodos();
         void listarPorID();
+        void listarStock0();
+        void listarStockMenor();
+        void listarStockMayor();
         void listarVectorDeId(int *vec,int tam);
         void ingresoStock();
         bool restarStock(int id);
+        void bajaLogica();
+        void modificarPrecio();
+        int ingresarId();
 
 };
 

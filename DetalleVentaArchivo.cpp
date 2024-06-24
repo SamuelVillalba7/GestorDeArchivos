@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "DetalleVentaArchivo.h"
 
 DetalleVentaArchivo::DetalleVentaArchivo(string nombreArchivo){
@@ -9,6 +11,18 @@ DetalleVentaArchivo::DetalleVentaArchivo(){
     _nombreArchivo ="detalleVentas.dat";
 }
 
+void DetalleVentaArchivo::vaciarArchivo(){
+
+     FILE *farchivo;
+    farchivo=fopen(_nombreArchivo.c_str(),"wb");
+     if (farchivo == nullptr){
+        cout<<"NO SE PUDO ABRIR DEL ARCHIVO"<<endl;
+        return ;
+     }
+
+    fclose(farchivo);
+
+}
 
 bool DetalleVentaArchivo::guardar(DetalleVenta aux){
 

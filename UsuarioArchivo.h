@@ -17,7 +17,7 @@ class UsuarioArchivo{
         bool modificar(Usuario usuario,int pos);
         int contarRegistros();
         int buscarPosicion(int dni);
-
+        void vaciarArchivo();
 
 
 };

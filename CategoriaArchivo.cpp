@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "CategoriaArchivo.h"
 
 CategoriaArchivo::CategoriaArchivo(string nombreArchivo){
@@ -8,6 +10,20 @@ CategoriaArchivo::CategoriaArchivo(string nombreArchivo){
 CategoriaArchivo::CategoriaArchivo(){
     _nombreArchivo ="categorias.dat";
 }
+
+void CategoriaArchivo::vaciarArchivo(){
+
+     FILE *farchivo;
+    farchivo=fopen(_nombreArchivo.c_str(),"wb");
+     if (farchivo == nullptr){
+        cout<<"NO SE PUDO ABRIR DEL ARCHIVO"<<endl;
+        return ;
+     }
+
+    fclose(farchivo);
+
+}
+
 
 bool CategoriaArchivo::guardar(Categoria categoria){
 

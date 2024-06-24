@@ -18,7 +18,10 @@ class ProductoArchivo{
         int contarRegistros();
         int buscarPosicion(int id);
         int generarId();
+        void vaciarArchivo();
 
+        ///FUNCION NOMBRE REPETIDO
+        bool existeNombre(string nombre);
 
 
 };

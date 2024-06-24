@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 #include "CierreDeCajaArchivo.h"
 
 CierreDeCajaArchivo::CierreDeCajaArchivo(string nombreArchivo){
@@ -8,6 +10,21 @@ CierreDeCajaArchivo::CierreDeCajaArchivo(string nombreArchivo){
 CierreDeCajaArchivo::CierreDeCajaArchivo(){
     _nombreArchivo ="CierreDeCaja.dat";
 }
+
+
+void CierreDeCajaArchivo::vaciarArchivo(){
+
+     FILE *farchivo;
+    farchivo=fopen(_nombreArchivo.c_str(),"wb");
+     if (farchivo == nullptr){
+        cout<<"NO SE PUDO ABRIR DEL ARCHIVO"<<endl;
+        return ;
+     }
+
+    fclose(farchivo);
+
+}
+
 
 bool CierreDeCajaArchivo::guardar(CierreDeCaja cierreDeCaja){
 

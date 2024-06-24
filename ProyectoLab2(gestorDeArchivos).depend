@@ -613,3 +613,778 @@
 	"DetalleVentaManager.h"
 	"CierreDeCajaManager.h"
 
+1716322612 source:d:\lab2\categoria.cpp
+	<iostream>
+	<cstring>
+	"Categoria.h"
+
+1716322612 d:\lab2\categoria.h
+	<string>
+
+1716322612 source:d:\lab2\categoriaarchivo.cpp
+	"CategoriaArchivo.h"
+
+1716322612 d:\lab2\categoriaarchivo.h
+	<string>
+	"Categoria.h"
+
+1716322612 source:d:\lab2\categoriamanager.cpp
+	<iostream>
+	<cstdlib>
+	"CategoriaManager.h"
+
+1716322612 d:\lab2\categoriamanager.h
+	"Categoria.h"
+	"CategoriaArchivo.h"
+
+1716322612 source:d:\lab2\cierredecaja.cpp
+	<iostream>
+	"CierreDeCaja.h"
+
+1716322612 d:\lab2\cierredecaja.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322612 d:\lab2\fecha.h
+
+1716322612 d:\lab2\horario.h
+	<string>
+
+1716322612 source:d:\lab2\cierredecajaarchivo.cpp
+	"CierreDeCajaArchivo.h"
+
+1716322612 d:\lab2\cierredecajaarchivo.h
+	<string>
+	"CierreDeCaja.h"
+
+1716325304 source:d:\lab2\cierredecajamanager.cpp
+	<iostream>
+	"CierreDeCajaManager.h"
+	"SucursalManager.h"
+
+1716325304 d:\lab2\cierredecajamanager.h
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+
+1716322612 d:\lab2\sucursalmanager.h
+	"Sucursal.h"
+	"SucursalArchivo.h"
+
+1716322612 d:\lab2\sucursal.h
+	<string>
+
+1716322612 d:\lab2\sucursalarchivo.h
+	<string>
+	"Sucursal.h"
+
+1716322612 source:d:\lab2\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1716322612 d:\lab2\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1716322612 d:\lab2\producto.h
+	<string>
+
+1716322612 source:d:\lab2\detalleventaarchivo.cpp
+	"DetalleVentaArchivo.h"
+
+1716322612 d:\lab2\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1716322612 source:d:\lab2\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1716322612 d:\lab2\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+	"ProductoManager.h"
+
+1718598850 d:\lab2\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1718229913 d:\lab2\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1718604821 source:d:\lab2\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1716322612 source:d:\lab2\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1716325314 source:d:\lab2\main.cpp
+	<iostream>
+	<cstring>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+	"SucursalManager.h"
+	"UsuarioManager.h"
+	"Categoria.h"
+	"CierreDeCajaManager.h"
+
+1716322612 d:\lab2\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"Usuario.h"
+	"UsuarioManager.h"
+
+1718603266 d:\lab2\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+	"Usuario.h"
+
+1716322612 d:\lab2\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1716322612 d:\lab2\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322612 d:\lab2\usuario.h
+	<string>
+
+1718267724 d:\lab2\usuariomanager.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+
+1716322612 d:\lab2\usuarioarchivo.h
+	<string>
+	"Usuario.h"
+
+1716322612 source:d:\lab2\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1718229910 source:d:\lab2\productoarchivo.cpp
+	"ProductoArchivo.h"
+
+1716322612 source:d:\lab2\sucursal.cpp
+	<iostream>
+	<cstring>
+	"Sucursal.h"
+
+1716322612 source:d:\lab2\sucursalarchivo.cpp
+	"SucursalArchivo.h"
+
+1716322612 source:d:\lab2\sucursalmanager.cpp
+	<iostream>
+	<cstdlib>
+	"SucursalManager.h"
+
+1716322612 source:d:\lab2\usuario.cpp
+	<iostream>
+	<cstring>
+	"Usuario.h"
+
+1716322612 source:d:\lab2\usuarioarchivo.cpp
+	"UsuarioArchivo.h"
+
+1718601763 source:d:\lab2\usuariomanager.cpp
+	<iostream>
+	<cstdlib>
+	"UsuarioManager.h"
+	"SucursalManager.h"
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"CierreDeCajaManager.h"
+	"Informes.h"
+	"FuncionesExtras.h"
+
+1716322612 source:d:\lab2\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1716322612 source:d:\lab2\ventaarchivo.cpp
+	"VentaArchivo.h"
+
+1718603895 source:d:\lab2\ventamanager.cpp
+	<iostream>
+	<cstring>
+	"VentaManager.h"
+	"SucursalManager.h"
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+	"FuncionesExtras.h"
+
+1716322612 source:d:\lab2\menus.cpp
+	<iostream>
+	<cstring>
+
+1718601870 source:d:\lab2\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+	"SucursalManager.h"
+	"FuncionesExtras.h"
+
+1718601752 d:\lab2\funcionesextras.h
+	<iostream>
+	<algorithm>
+	<cctype>
+	<string>
+
+1718269507 d:\lab2\informes.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+	"UsuarioManager.h"
+	"Producto.h"
+	"ProductoManager.h"
+	"ProductoArchivo.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"VentaManager.h"
+
+1718602914 source:d:\lab2\informes.cpp
+	<iostream>
+	"Informes.h"
+
+1718602132 source:d:\lab2\funcionesextras.cpp
+	<iostream>
+	"FuncionesExtras.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\categoria.cpp
+	<iostream>
+	<cstring>
+	"Categoria.h"
+
+1716322612 c:\users\usuario\desktop\lab2\categoria.h
+	<string>
+
+1716322612 source:c:\users\usuario\desktop\lab2\categoriaarchivo.cpp
+	"CategoriaArchivo.h"
+
+1716322612 c:\users\usuario\desktop\lab2\categoriaarchivo.h
+	<string>
+	"Categoria.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\categoriamanager.cpp
+	<iostream>
+	<cstdlib>
+	"CategoriaManager.h"
+
+1716322612 c:\users\usuario\desktop\lab2\categoriamanager.h
+	"Categoria.h"
+	"CategoriaArchivo.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\cierredecaja.cpp
+	<iostream>
+	"CierreDeCaja.h"
+
+1716322612 c:\users\usuario\desktop\lab2\cierredecaja.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322612 c:\users\usuario\desktop\lab2\fecha.h
+
+1716322612 c:\users\usuario\desktop\lab2\horario.h
+	<string>
+
+1716322612 source:c:\users\usuario\desktop\lab2\cierredecajaarchivo.cpp
+	"CierreDeCajaArchivo.h"
+
+1716322612 c:\users\usuario\desktop\lab2\cierredecajaarchivo.h
+	<string>
+	"CierreDeCaja.h"
+
+1718630256 source:c:\users\usuario\desktop\lab2\cierredecajamanager.cpp
+	<iostream>
+	"CierreDeCajaManager.h"
+	"SucursalManager.h"
+
+1718630256 c:\users\usuario\desktop\lab2\cierredecajamanager.h
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+
+1716322612 c:\users\usuario\desktop\lab2\sucursalmanager.h
+	"Sucursal.h"
+	"SucursalArchivo.h"
+
+1716322612 c:\users\usuario\desktop\lab2\sucursal.h
+	<string>
+
+1716322612 c:\users\usuario\desktop\lab2\sucursalarchivo.h
+	<string>
+	"Sucursal.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1716322612 c:\users\usuario\desktop\lab2\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1716322612 c:\users\usuario\desktop\lab2\producto.h
+	<string>
+
+1716322612 source:c:\users\usuario\desktop\lab2\detalleventaarchivo.cpp
+	"DetalleVentaArchivo.h"
+
+1716322612 c:\users\usuario\desktop\lab2\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1716322612 c:\users\usuario\desktop\lab2\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+	"ProductoManager.h"
+
+1718598850 c:\users\usuario\desktop\lab2\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1718229913 c:\users\usuario\desktop\lab2\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1718604821 source:c:\users\usuario\desktop\lab2\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1718602132 source:c:\users\usuario\desktop\lab2\funcionesextras.cpp
+	<iostream>
+	"FuncionesExtras.h"
+
+1718601752 c:\users\usuario\desktop\lab2\funcionesextras.h
+	<iostream>
+	<algorithm>
+	<cctype>
+	<string>
+
+1716322612 source:c:\users\usuario\desktop\lab2\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1718602914 source:c:\users\usuario\desktop\lab2\informes.cpp
+	<iostream>
+	"Informes.h"
+
+1718269507 c:\users\usuario\desktop\lab2\informes.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+	"UsuarioManager.h"
+	"Producto.h"
+	"ProductoManager.h"
+	"ProductoArchivo.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"VentaManager.h"
+
+1716322612 c:\users\usuario\desktop\lab2\usuario.h
+	<string>
+
+1716322612 c:\users\usuario\desktop\lab2\usuarioarchivo.h
+	<string>
+	"Usuario.h"
+
+1718267724 c:\users\usuario\desktop\lab2\usuariomanager.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+
+1716322612 c:\users\usuario\desktop\lab2\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322612 c:\users\usuario\desktop\lab2\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1718603266 c:\users\usuario\desktop\lab2\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+	"Usuario.h"
+
+1716325314 source:c:\users\usuario\desktop\lab2\main.cpp
+	<iostream>
+	<cstring>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+	"SucursalManager.h"
+	"UsuarioManager.h"
+	"Categoria.h"
+	"CierreDeCajaManager.h"
+
+1716322612 c:\users\usuario\desktop\lab2\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"Usuario.h"
+	"UsuarioManager.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\menus.cpp
+	<iostream>
+	<cstring>
+
+1716322612 source:c:\users\usuario\desktop\lab2\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1718229910 source:c:\users\usuario\desktop\lab2\productoarchivo.cpp
+	"ProductoArchivo.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\sucursal.cpp
+	<iostream>
+	<cstring>
+	"Sucursal.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\sucursalarchivo.cpp
+	"SucursalArchivo.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\sucursalmanager.cpp
+	<iostream>
+	<cstdlib>
+	"SucursalManager.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\usuario.cpp
+	<iostream>
+	<cstring>
+	"Usuario.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\usuarioarchivo.cpp
+	"UsuarioArchivo.h"
+
+1718601763 source:c:\users\usuario\desktop\lab2\usuariomanager.cpp
+	<iostream>
+	<cstdlib>
+	"UsuarioManager.h"
+	"SucursalManager.h"
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"CierreDeCajaManager.h"
+	"Informes.h"
+	"FuncionesExtras.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1716322612 source:c:\users\usuario\desktop\lab2\ventaarchivo.cpp
+	"VentaArchivo.h"
+
+1718604902 source:c:\users\usuario\desktop\lab2\ventamanager.cpp
+	<iostream>
+	<cstring>
+	"VentaManager.h"
+	"SucursalManager.h"
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+	"FuncionesExtras.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\categoria.cpp
+	<iostream>
+	<cstring>
+	"Categoria.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\categoria.h
+	<string>
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\categoriaarchivo.cpp
+	<iostream>
+	"CategoriaArchivo.h"
+
+1718824671 c:\users\villa\desktop\c++\lab2\lab2\categoriaarchivo.h
+	<string>
+	"Categoria.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\cierredecaja.cpp
+	<iostream>
+	"CierreDeCaja.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\cierredecaja.h
+	"Fecha.h"
+	"Horario.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\fecha.h
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\horario.h
+	<string>
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\cierredecajaarchivo.cpp
+	<iostream>
+	"CierreDeCajaArchivo.h"
+
+1718824678 c:\users\villa\desktop\c++\lab2\lab2\cierredecajaarchivo.h
+	<string>
+	"CierreDeCaja.h"
+
+1718634517 source:c:\users\villa\desktop\c++\lab2\lab2\cierredecajamanager.cpp
+	<iostream>
+	"CierreDeCajaManager.h"
+	"SucursalManager.h"
+
+1718630256 c:\users\villa\desktop\c++\lab2\lab2\cierredecajamanager.h
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\sucursalmanager.h
+	"Sucursal.h"
+	"SucursalArchivo.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\sucursal.h
+	<string>
+
+1718824680 c:\users\villa\desktop\c++\lab2\lab2\sucursalarchivo.h
+	<string>
+	"Sucursal.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\detalleventa.cpp
+	<iostream>
+	<cstring>
+	"DetalleVenta.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\detalleventa.h
+	"Horario.h"
+	"Producto.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\producto.h
+	<string>
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\detalleventaarchivo.cpp
+	<iostream>
+	"DetalleVentaArchivo.h"
+
+1718824676 c:\users\villa\desktop\c++\lab2\lab2\detalleventaarchivo.h
+	<string>
+	"DetalleVenta.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\detalleventamanager.cpp
+	<iostream>
+	"DetalleVentaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\detalleventamanager.h
+	"DetalleVentaArchivo.h"
+	"DetalleVenta.h"
+	"ProductoManager.h"
+
+1718891622 c:\users\villa\desktop\c++\lab2\lab2\productomanager.h
+	"ProductoArchivo.h"
+	"Producto.h"
+
+1718824669 c:\users\villa\desktop\c++\lab2\lab2\productoarchivo.h
+	<string>
+	"Producto.h"
+
+1718604821 source:c:\users\villa\desktop\c++\lab2\lab2\fecha.cpp
+	<iostream>
+	<ctime>
+	"Fecha.h"
+
+1719156461 source:c:\users\villa\desktop\c++\lab2\lab2\funcionesextras.cpp
+	<iostream>
+	"FuncionesExtras.h"
+
+1719156590 c:\users\villa\desktop\c++\lab2\lab2\funcionesextras.h
+	<iostream>
+	<algorithm>
+	<cctype>
+	<string>
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\horario.cpp
+	<iostream>
+	<ctime>
+	"Horario.h"
+
+1718632897 source:c:\users\villa\desktop\c++\lab2\lab2\informes.cpp
+	<iostream>
+	"Informes.h"
+
+1718632897 c:\users\villa\desktop\c++\lab2\lab2\informes.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+	"UsuarioManager.h"
+	"Producto.h"
+	"ProductoManager.h"
+	"ProductoArchivo.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"VentaManager.h"
+	"CierreDeCajaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\usuario.h
+	<string>
+
+1718824685 c:\users\villa\desktop\c++\lab2\lab2\usuarioarchivo.h
+	<string>
+	"Usuario.h"
+
+1718267724 c:\users\villa\desktop\c++\lab2\lab2\usuariomanager.h
+	"Usuario.h"
+	"UsuarioArchivo.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\venta.h
+	"Fecha.h"
+	"Horario.h"
+
+1718824682 c:\users\villa\desktop\c++\lab2\lab2\ventaarchivo.h
+	<string>
+	"Venta.h"
+
+1718603266 c:\users\villa\desktop\c++\lab2\lab2\ventamanager.h
+	"VentaArchivo.h"
+	"Venta.h"
+	"Usuario.h"
+
+1719156814 source:c:\users\villa\desktop\c++\lab2\lab2\main.cpp
+	<iostream>
+	<cstring>
+	"ProductoManager.h"
+	"Producto.h"
+	"menus.h"
+	"Fecha.h"
+	"VentaManager.h"
+	"FuncionesExtras.h"
+	"Venta.h"
+	"VentaArchivo.h"
+	"DetalleVenta.h"
+	"DetalleVentaManager.h"
+	"SucursalManager.h"
+	"UsuarioManager.h"
+	"Categoria.h"
+	"CierreDeCajaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\menus.h
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"Usuario.h"
+	"UsuarioManager.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\menus.cpp
+	<iostream>
+	<cstring>
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\producto.cpp
+	<iostream>
+	<cstring>
+	"Producto.h"
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\productoarchivo.cpp
+	<iostream>
+	"ProductoArchivo.h"
+
+1718900069 source:c:\users\villa\desktop\c++\lab2\lab2\productomanager.cpp
+	<iostream>
+	<cstdlib>
+	"ProductoManager.h"
+	"SucursalManager.h"
+	"FuncionesExtras.h"
+	"CategoriaManager.h"
+
+1716322612 c:\users\villa\desktop\c++\lab2\lab2\categoriamanager.h
+	"Categoria.h"
+	"CategoriaArchivo.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\sucursal.cpp
+	<iostream>
+	<cstring>
+	"Sucursal.h"
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\sucursalarchivo.cpp
+	<iostream>
+	"SucursalArchivo.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\sucursalmanager.cpp
+	<iostream>
+	<cstdlib>
+	"SucursalManager.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\usuario.cpp
+	<iostream>
+	<cstring>
+	"Usuario.h"
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\usuarioarchivo.cpp
+	<iostream>
+	"UsuarioArchivo.h"
+
+1719156779 source:c:\users\villa\desktop\c++\lab2\lab2\usuariomanager.cpp
+	<iostream>
+	<cstdlib>
+	"UsuarioManager.h"
+	"SucursalManager.h"
+	"ProductoManager.h"
+	"VentaManager.h"
+	"DetalleVentaManager.h"
+	"CierreDeCajaManager.h"
+	"Informes.h"
+	"CategoriaManager.h"
+	"FuncionesExtras.h"
+	"Configuracion.h"
+
+1716322612 source:c:\users\villa\desktop\c++\lab2\lab2\venta.cpp
+	<iostream>
+	<cstring>
+	"Venta.h"
+
+1718831605 source:c:\users\villa\desktop\c++\lab2\lab2\ventaarchivo.cpp
+	<iostream>
+	"VentaArchivo.h"
+
+1718604902 source:c:\users\villa\desktop\c++\lab2\lab2\ventamanager.cpp
+	<iostream>
+	<cstring>
+	"VentaManager.h"
+	"SucursalManager.h"
+	"CierreDeCaja.h"
+	"CierreDeCajaArchivo.h"
+	"FuncionesExtras.h"
+
+1718631259 source:c:\users\villa\desktop\c++\lab2\lab2\categoriamanager.cpp
+	<iostream>
+	<cstdlib>
+	"CategoriaManager.h"
+
+1719155723 source:c:\users\villa\desktop\c++\lab2\lab2\configuracion.cpp
+	<iostream>
+	<cstring>
+	"Configuracion.h"
+
+1719154637 c:\users\villa\desktop\c++\lab2\lab2\configuracion.h
+	"ProductoArchivo.h"
+	"VentaArchivo.h"
+	"DetalleVentaArchivo.h"
+	"CategoriaArchivo.h"
+	"CierreDeCajaArchivo.h"
+	"SucursalArchivo.h"
+	"UsuarioArchivo.h"
+
