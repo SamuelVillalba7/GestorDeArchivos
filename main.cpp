@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+
 using namespace std;
 
 #include "ProductoManager.h"
@@ -51,13 +52,13 @@ int main()
 
 
 
-
 */
+
+
 
    UsuarioManager um;
    um.menuInicio();
 
-   // validarNumero();
 
 
     return 0;
@@ -116,6 +117,15 @@ void comprar(Usuario usuario){
 
     producto= productoArchivo.leer(pos);
 
+    bool estado=producto.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    continue;
+
+    }
     bool result=productoManager.restarStock(producto.getId());
 
     if(!result){

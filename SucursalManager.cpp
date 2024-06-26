@@ -5,6 +5,9 @@ using namespace std;
 
 
 bool SucursalManager::cargar(){
+    cout<<"----------"<<endl;
+    cout<<"Sucursal"<<endl;
+    cout<<"----------"<<endl;
     Sucursal aux;
     int id;
     string n;
@@ -19,10 +22,11 @@ bool SucursalManager::cargar(){
     getline(cin,n);
 
     aux.setNombre(n);
+    aux.setEstado(true);
 
 
     if(_archivo.guardar(aux)){
-        cout<<"Se guardo correctamente"<<endl;
+        cout<<endl<<"Se guardo correctamente"<<endl;
         return true;
     }
     else{
@@ -34,8 +38,13 @@ bool SucursalManager::cargar(){
 }
 
 void SucursalManager::mostrar(Sucursal sucursal){
+
+    bool estado =sucursal.getEstado();
+    if(estado){
     cout<<"El id es : "<<sucursal.getId()<<endl;
     cout<<"El Nombre es : "<<sucursal.getNombre()<<endl;
+
+    }
 }
 
 void SucursalManager::listarPorID(){
@@ -46,6 +55,17 @@ void SucursalManager::listarPorID(){
     int pos = _archivo.buscarPosicion(id);
     if (pos >= 0){
         Sucursal aux = _archivo.leer(pos);
+
+         bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
+
+
         mostrar(aux);
     }
     else{
@@ -55,7 +75,33 @@ void SucursalManager::listarPorID(){
 }
 
 
+int SucursalManager::ingresarId(){
 
+    int id, pos;
+    cout <<"Ingrese el ID de la sucursal"<<endl;
+    cin>> id;
+
+
+    pos=_archivo.buscarPosicion(id);
+    while(pos<0){
+        cout<<"ID no registrado"<<endl;
+        cout<<"------------------------"<<endl;
+        cout<<"Ingrese otro id"<<endl;
+        cout <<"(Si ingresa -1 saldra de la carga)"<<endl;
+        cin>> id;
+
+        if(id == -1){
+            return -1;
+
+        }
+
+        pos=_archivo.buscarPosicion(id);
+
+    }
+
+    return pos;
+
+}
 
 
 void SucursalManager::listarTodos(){
@@ -82,7 +128,53 @@ string SucursalManager::nombrePorId(int id){
     return sucursal.getNombre();
 }
 
+void SucursalManager::bajaLogica(){
 
+    int pos;
+    pos= ingresarId();
+    Sucursal aux;
+    aux=_archivo.leer(pos);
+    if (pos == -1){
+         cout<<"Salir de la operacion"<<endl;
+        return;
+    }
+
+
+     bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
+
+    cout<<"--------------------------"<<endl;
+    cout<<"--------------------------"<<endl;
+    mostrar(aux);
+    cout<<"--------------------------"<<endl;
+    cout<<"--------------------------"<<endl;
+
+    int opc;
+    cout<<"Este producto quiere dar de baja? (1.Si 2.No)"<<endl;
+    cin>>opc;
+
+    if(opc==1){
+
+        aux.setEstado(false);
+        if(_archivo.modificar(aux,pos)){
+
+            cout<<"Se elimino el registro"<<endl;
+        }
+        else{
+                cout<<"No se pudo eliminar el registro"<<endl;
+            }
+    }
+    else{
+        cout<<"No se elimino el registro"<<endl;
+    }
+
+}
 
 
 
@@ -121,7 +213,7 @@ void SucursalManager::menu(){
                 break;
             case 4:
                 {
-
+                    bajaLogica();
                 }
                 break;
             case 99:

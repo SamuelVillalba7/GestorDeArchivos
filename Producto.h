@@ -31,7 +31,9 @@ public:
     void setStock (int x);
     void setCategoria(int x);
 
+
     void setEstado(bool x);
+    bool getEstado();
 
 
 
@@ -43,7 +45,6 @@ public:
     int getStockMinimo();
 
     int getCategoria();
-    bool getEstado();
 
 
 

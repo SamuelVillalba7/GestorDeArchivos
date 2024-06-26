@@ -15,6 +15,8 @@ class CategoriaManager{
         void listarPorID();
         bool IdDisponible(int id);
         string nombrePorId(int id);
+        void bajaLogica();
+        int ingresarId();
 
 };
 

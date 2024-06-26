@@ -43,11 +43,25 @@ void coincidencia(bool coincidencia){
 
 
 int validarNumero(){
-    int n;
+
+     int n=-1;
+
+    while(n == -1){
+
     cin>>n;
 
     if(n==false || n < 0){
-        return -1;
+        cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        n=-1;
+
+        cout<<"Dato invalido"<<endl;
+        cout<<"Reingrese un numero"<<endl;
+
     }
+
+   }
+
     return n;
+
 }

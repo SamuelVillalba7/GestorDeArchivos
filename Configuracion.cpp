@@ -13,6 +13,11 @@ using namespace std;
     strcpy(_BkpCategoria,"Categoria.bkp");
     strcpy(_BkpCierreDeCaja,"CierreDeCaja.bkp");
     strcpy(_BkpUsuario,"Usuario.bkp");
+
+
+    strcpy(_InicioProducto,"Producto.inicio");
+    strcpy(_InicioSucursal,"Sucursal.inicio");
+    strcpy(_InicioCategoria,"Categoria.inicio");
 }
 
 
@@ -116,6 +121,8 @@ void Configuracion::limpiarBkpProducto(){
    fclose(farchivo);
   delete [] vec;
 
+  cout<<"Se creo el bkp correctamente"<<endl;
+
   }
 
 
@@ -153,6 +160,8 @@ void Configuracion::limpiarBkpProducto(){
 
    fclose(farchivo);
   delete [] vec;
+
+  cout<<"Se creo el bkp correctamente"<<endl;
 
   }
 
@@ -193,6 +202,7 @@ void Configuracion::limpiarBkpProducto(){
    fclose(farchivo);
   delete [] vec;
 
+    cout<<"Se creo el bkp correctamente"<<endl;
   }
 
 
@@ -231,6 +241,7 @@ void Configuracion::limpiarBkpProducto(){
    fclose(farchivo);
   delete [] vec;
 
+  cout<<"Se creo el bkp correctamente"<<endl;
   }
 
 
@@ -269,6 +280,7 @@ void Configuracion::limpiarBkpProducto(){
    fclose(farchivo);
   delete [] vec;
 
+    cout<<"Se creo el bkp correctamente"<<endl;
   }
 
 
@@ -306,6 +318,8 @@ void Configuracion::limpiarBkpProducto(){
 
    fclose(farchivo);
   delete [] vec;
+
+  cout<<"Se creo el bkp correctamente"<<endl;
 
   }
 
@@ -345,6 +359,8 @@ void Configuracion::limpiarBkpProducto(){
    fclose(farchivo);
   delete [] vec;
 
+  cout<<"Se creo el bkp correctamente"<<endl;
+
   }
 
 
@@ -366,6 +382,8 @@ void Configuracion::limpiarBkpProducto(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
 
 
@@ -386,6 +404,8 @@ void Configuracion::limpiarBkpProducto(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
 
 
@@ -406,6 +426,8 @@ void Configuracion::restablecerCierreDeCaja(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
 
 
@@ -426,6 +448,8 @@ void Configuracion::restablecerSucursal(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
 
 
@@ -446,6 +470,8 @@ void Configuracion::restablecerCategoria(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
 
 
@@ -466,6 +492,8 @@ void Configuracion::restablecerUsuario(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
 
 
@@ -486,7 +514,93 @@ void Configuracion::restablecerVenta(){
         arch.guardar(aux);
     }
      fclose(farchivo);
+
+     cout<<"Se restablecio correctamente"<<endl;
 }
+
+
+
+
+
+void Configuracion::datosDeInicio(){
+
+     restablecerCategoriaInicio();
+     restablecerProductoInicio();
+     restablecerSucursalInicio();
+    cout<<"Se restablecio correctamente"<<endl;
+}
+
+
+ void Configuracion::restablecerProductoInicio(){
+
+     ProductoArchivo arch;
+     arch.vaciarArchivo();
+     Producto aux;
+
+     FILE *farchivo;
+    farchivo=fopen(_InicioProducto,"rb");
+    if(farchivo==NULL){
+    cout<<"NO SE PUDO ABRIR EL ARCHIVO";
+    return;
+    }
+
+    while(fread(&aux,sizeof (Producto),1,farchivo)==1){
+        arch.guardar(aux);
+    }
+     fclose(farchivo);
+}
+
+
+void Configuracion::restablecerSucursalInicio(){
+
+     SucursalArchivo arch;
+     arch.vaciarArchivo();
+     Sucursal aux;
+
+     FILE *farchivo;
+    farchivo=fopen(_InicioSucursal,"rb");
+    if(farchivo==NULL){
+    cout<<"NO SE PUDO ABRIR EL ARCHIVO";
+    return;
+    }
+
+    while(fread(&aux,sizeof (Sucursal),1,farchivo)==1){
+        arch.guardar(aux);
+    }
+     fclose(farchivo);
+}
+
+
+void Configuracion::restablecerCategoriaInicio(){
+
+     CategoriaArchivo arch;
+     arch.vaciarArchivo();
+     Categoria aux;
+
+     FILE *farchivo;
+    farchivo=fopen(_InicioCategoria,"rb");
+    if(farchivo==NULL){
+    cout<<"NO SE PUDO ABRIR EL ARCHIVO";
+    return;
+    }
+
+    while(fread(&aux,sizeof(Categoria),1,farchivo)==1){
+        arch.guardar(aux);
+    }
+     fclose(farchivo);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -500,6 +614,7 @@ void Configuracion::menuPrincipal(){
         cout << "1) CREAR BKPS" << endl;
         cout << "2) RESTAURAR DATOS" << endl;
         cout << "3) LIMPIAR ARCHIVOS" << endl;
+        cout << "4) ESTABLECER DATOS DE INICIO" << endl;
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
@@ -520,6 +635,12 @@ void Configuracion::menuPrincipal(){
             case 3:
                 {
                     menuVaciarArchivos();
+                }
+                break;
+
+            case 4:
+                {
+                    datosDeInicio();
                 }
                 break;
 

@@ -9,17 +9,21 @@ class Sucursal{
     private:
         int _id;
         char _nombre[30];
+        bool _estado;
     public:
 
         Sucursal();
-
         Sucursal(int id,string nombre);
+        void setEstado(bool x);
+        bool getEstado();
 
         int getId();
         string getNombre();
 
         void setId(int x);
         void setNombre(string x);
+
+
 
 
 };

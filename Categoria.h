@@ -8,6 +8,7 @@ class Categoria{
     private:
         int _id;
         char _nombre[30];
+        bool _estado;
     public:
 
         Categoria();
@@ -19,6 +20,8 @@ class Categoria{
 
         void setId(int x);
         void setNombre(string x);
+        void setEstado(bool x);
+        bool getEstado();
 
 
 };

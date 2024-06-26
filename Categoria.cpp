@@ -34,3 +34,14 @@ void Categoria::setId(int id){
 int Categoria::getId(){
     return _id;
 }
+
+
+void Categoria::setEstado(bool x){
+    _estado=x;
+}
+
+bool Categoria::getEstado(){
+    return _estado;
+}
+
+

@@ -113,7 +113,7 @@ bool ProductoManager::cargar(){
     cout << endl;
 
     cout<<"Ingrese precio de venta"<<endl;
-    cout<<"Si ingresa un 0 el precio de venta sera un 75% mas que el de la compra"<<endl;
+    cout<<"Si ingresa un 0 el precio de venta sera un 35% mas que el de la compra"<<endl;
     cout<<"$";
     cin>>d;
     if(exitCarga(d)) return false;
@@ -121,7 +121,7 @@ bool ProductoManager::cargar(){
     //*al poner 0 se guarda el valor de compra mas el 75%*/
 
     if (d==0){
-        d=aux.getPrecioCompra()*1.75;
+        d=aux.getPrecioCompra()*1.35;
         aux.setPrecioVenta(d);
     }else{
         aux.setPrecioVenta(d);
@@ -146,6 +146,9 @@ bool ProductoManager::cargar(){
 void ProductoManager::mostrar(Producto producto){
 
 
+    bool estado= producto.getEstado();
+
+    if(estado){
     cout<<"El id es : ";
     guionCero(producto.getId()); //GUIONCERO ES UNA FUNCION ESTETICA QUE REEMPLAZA 0 por '-'
     cout << endl;
@@ -168,6 +171,8 @@ void ProductoManager::mostrar(Producto producto){
     cout<<"El Precio de Venta es : $";
     guionCero(producto.getPrecioVenta());
     cout << endl << "---------------------------" << endl;
+    }
+
 
 
 }
@@ -177,6 +182,16 @@ void ProductoManager::listarPorID(){
     int pos = ingresarId();
     if (pos >= 0){
         Producto aux = _archivo.leer(pos);
+
+    bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
+
         mostrar(aux);
     }
     else{
@@ -205,7 +220,10 @@ void ProductoManager::listarStock0(){
     Producto aux;
     for(int i=0; i<_archivo.contarRegistros(); i++){
         aux = _archivo.leer(i);
-        if(aux.getStock() == 0){
+
+
+
+        if(aux.getStock() == 0  && aux.getEstado()){
             mostrar(aux);
             cout<<endl<<endl;
         }
@@ -221,7 +239,7 @@ void ProductoManager::listarStockMenor(){
     cout << endl;
     for(int i=0; i<_archivo.contarRegistros(); i++){
         aux = _archivo.leer(i);
-        if(aux.getStock() < stockM){
+        if(aux.getStock() < stockM  && aux.getEstado()){
             cout << "---------------------------" << endl;
             mostrar(aux);
             cout<<endl;
@@ -240,7 +258,7 @@ void ProductoManager::listarStockMayor(){
     cout << endl;
     for(int i=0; i<_archivo.contarRegistros(); i++){
         aux = _archivo.leer(i);
-        if(aux.getStock() > stockM){
+        if(aux.getStock() > stockM && aux.getEstado()){
             cout << "---------------------------" << endl;
             mostrar(aux);
             cout<<endl;
@@ -251,9 +269,15 @@ void ProductoManager::listarStockMayor(){
 }
 
 void ProductoManager::listarTodos(){
+    Producto aux;
     for(int i=0; i<_archivo.contarRegistros(); i++){
-       mostrar(_archivo.leer(i));
-       cout<<endl<<endl;
+            aux=_archivo.leer(i);
+            bool estado= aux.getEstado();
+            if(estado){
+                mostrar(aux);
+                 cout<<endl<<endl;
+            }
+
     }
 }
 
@@ -271,6 +295,15 @@ void ProductoManager::ingresoStock(){
         return;
     }
     aux=_archivo.leer(pos);
+
+    bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
 
     cout<<"--------------------------"<<endl;
     cout<<"--------------------------"<<endl;
@@ -343,6 +376,16 @@ void ProductoManager::ingresoStock(){
 
 
         aux=_archivo.leer(pos);
+
+        bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return false;
+    }
+
         int stock=aux.getStock();
 
         if(stock>0){
@@ -407,6 +450,15 @@ void ProductoManager::bajaLogica(){
         return;
     }
 
+    bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
+
     cout<<"--------------------------"<<endl;
     cout<<"--------------------------"<<endl;
     mostrar(aux);
@@ -448,6 +500,15 @@ void ProductoManager::modificarPrecio(){
     Producto aux;
 
     aux= _archivo.leer(pos);
+
+    bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
 
 
     cout<<"--------------------------"<<endl;

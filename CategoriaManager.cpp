@@ -5,6 +5,11 @@ using namespace std;
 
 
 bool CategoriaManager::cargar(){
+
+    cout<<"----------"<<endl;
+    cout<<"Categoria"<<endl;
+    cout<<"----------"<<endl;
+
     Categoria aux;
     int id;
     string n;
@@ -19,10 +24,11 @@ bool CategoriaManager::cargar(){
     getline(cin,n);
 
     aux.setNombre(n);
+    aux.setEstado(true);
 
 
     if(_archivo.guardar(aux)){
-        cout<<"Se guardo correctamente"<<endl;
+        cout<<endl<<"Se guardo correctamente"<<endl;
         return true;
     }
     else{
@@ -34,8 +40,15 @@ bool CategoriaManager::cargar(){
 }
 
 void CategoriaManager::mostrar(Categoria categoria){
+
+    bool estado=categoria.getEstado();
+    if(estado)
+    {
+
     cout<<"El id es : "<<categoria.getId()<<endl;
     cout<<"El Nombre es : "<<categoria.getNombre()<<endl;
+
+    }
 }
 
 void CategoriaManager::listarPorID(){
@@ -46,6 +59,16 @@ void CategoriaManager::listarPorID(){
     int pos = _archivo.buscarPosicion(id);
     if (pos >= 0){
         Categoria aux = _archivo.leer(pos);
+
+         bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
+
         mostrar(aux);
     }
     else{
@@ -79,9 +102,84 @@ string CategoriaManager::nombrePorId(int id){
     int pos;
     pos=_archivo.buscarPosicion(id);
     Categoria categoria=_archivo.leer(pos);
+
     return categoria.getNombre();
 }
 
+int CategoriaManager::ingresarId(){
+
+    int id, pos;
+    cout <<"Ingrese el ID del producto"<<endl;
+    cin>> id;
+
+
+    pos=_archivo.buscarPosicion(id);
+    while(pos<0){
+        cout<<"ID no registrado"<<endl;
+        cout<<"------------------------"<<endl;
+        cout<<"Ingrese otro id"<<endl;
+        cout <<"(Si ingresa -1 saldra de la carga)"<<endl;
+        cin>> id;
+
+        if(id == -1){
+            return -1;
+
+        }
+
+        pos=_archivo.buscarPosicion(id);
+
+    }
+
+    return pos;
+
+}
+
+void CategoriaManager::bajaLogica(){
+
+    int pos;
+    pos= ingresarId();
+    Categoria aux;
+    aux=_archivo.leer(pos);
+    if (pos == -1){
+         cout<<"Salir de la operacion"<<endl;
+        return;
+    }
+
+     bool estado=aux.getEstado();
+
+    if(!estado){
+    cout<<"--------------------------"<<endl;
+    cout<<"Registro dado de baja"<<endl;
+    cout<<"--------------------------"<<endl;
+    return;
+    }
+
+    cout<<"--------------------------"<<endl;
+    cout<<"--------------------------"<<endl;
+    mostrar(aux);
+    cout<<"--------------------------"<<endl;
+    cout<<"--------------------------"<<endl;
+
+    int opc;
+    cout<<"Este producto quiere dar de baja? (1.Si 2.No)"<<endl;
+    cin>>opc;
+
+    if(opc==1){
+
+        aux.setEstado(false);
+        if(_archivo.modificar(aux,pos)){
+
+            cout<<"Se elimino el registro"<<endl;
+        }
+        else{
+                cout<<"No se pudo eliminar el registro"<<endl;
+            }
+    }
+    else{
+        cout<<"No se elimino el registro"<<endl;
+    }
+
+}
 
 
 
@@ -121,7 +219,7 @@ void CategoriaManager::menu(){
                 break;
             case 4:
                 {
-
+                    bajaLogica();
                 }
                 break;
             case 99:

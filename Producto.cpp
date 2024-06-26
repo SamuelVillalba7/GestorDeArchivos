@@ -112,6 +112,11 @@ float Producto::getPrecioCompra(){
 float Producto::getPrecioVenta(){
     return _precioVenta;
 }
+
+bool Producto::getEstado(){
+    return _estado;
+}
+
 /*Producto Producto::cargarProductos()
 {
 

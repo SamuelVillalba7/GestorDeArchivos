@@ -44,10 +44,7 @@ bool UsuarioManager::cargar(){
 
     cout<<"Dni: ";
     dni=validarNumero();
-    if(dni==-1){
-        cout<<"no ingreses letras pelotudo"<<endl;
-        return false;
-    }
+
     usuario.setDni(dni);
 
         cout<<"Ingrese la Sucursal"<<endl;

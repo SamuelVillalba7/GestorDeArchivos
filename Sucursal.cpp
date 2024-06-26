@@ -34,3 +34,12 @@ void Sucursal::setId(int x){
 int Sucursal::getId(){
     return _id;
 }
+
+
+void Sucursal::setEstado(bool x){
+    _estado=x;
+}
+
+bool Sucursal::getEstado(){
+    return _estado;
+}

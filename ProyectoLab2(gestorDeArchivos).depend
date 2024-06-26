@@ -1388,12 +1388,12 @@
 	"SucursalArchivo.h"
 	"UsuarioArchivo.h"
 
-1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\categoria.cpp
+1719408225 source:c:\users\villa\desktop\c++\gestordearchivos\categoria.cpp
 	<iostream>
 	<cstring>
 	"Categoria.h"
 
-1716322612 c:\users\villa\desktop\c++\gestordearchivos\categoria.h
+1719408225 c:\users\villa\desktop\c++\gestordearchivos\categoria.h
 	<string>
 
 1718831605 source:c:\users\villa\desktop\c++\gestordearchivos\categoriaarchivo.cpp
@@ -1404,12 +1404,12 @@
 	<string>
 	"Categoria.h"
 
-1718631259 source:c:\users\villa\desktop\c++\gestordearchivos\categoriamanager.cpp
+1719421195 source:c:\users\villa\desktop\c++\gestordearchivos\categoriamanager.cpp
 	<iostream>
 	<cstdlib>
 	"CategoriaManager.h"
 
-1716322612 c:\users\villa\desktop\c++\gestordearchivos\categoriamanager.h
+1719408778 c:\users\villa\desktop\c++\gestordearchivos\categoriamanager.h
 	"Categoria.h"
 	"CategoriaArchivo.h"
 
@@ -1430,12 +1430,12 @@
 1716322612 c:\users\villa\desktop\c++\gestordearchivos\horario.h
 	<string>
 
-1719155723 source:c:\users\villa\desktop\c++\gestordearchivos\configuracion.cpp
+1719432654 source:c:\users\villa\desktop\c++\gestordearchivos\configuracion.cpp
 	<iostream>
 	<cstring>
 	"Configuracion.h"
 
-1719154637 c:\users\villa\desktop\c++\gestordearchivos\configuracion.h
+1719432165 c:\users\villa\desktop\c++\gestordearchivos\configuracion.h
 	"ProductoArchivo.h"
 	"VentaArchivo.h"
 	"DetalleVentaArchivo.h"
@@ -1448,7 +1448,7 @@
 	<string>
 	"Producto.h"
 
-1716322612 c:\users\villa\desktop\c++\gestordearchivos\producto.h
+1719408225 c:\users\villa\desktop\c++\gestordearchivos\producto.h
 	<string>
 
 1718824682 c:\users\villa\desktop\c++\gestordearchivos\ventaarchivo.h
@@ -1471,7 +1471,7 @@
 	<string>
 	"Sucursal.h"
 
-1716322612 c:\users\villa\desktop\c++\gestordearchivos\sucursal.h
+1719408225 c:\users\villa\desktop\c++\gestordearchivos\sucursal.h
 	<string>
 
 1718824685 c:\users\villa\desktop\c++\gestordearchivos\usuarioarchivo.h
@@ -1499,7 +1499,7 @@
 	"DetalleVenta.h"
 	"ProductoManager.h"
 
-1718891622 c:\users\villa\desktop\c++\gestordearchivos\productomanager.h
+1719425121 c:\users\villa\desktop\c++\gestordearchivos\productomanager.h
 	"ProductoArchivo.h"
 	"Producto.h"
 
@@ -1508,15 +1508,16 @@
 	<ctime>
 	"Fecha.h"
 
-1719259455 source:c:\users\villa\desktop\c++\gestordearchivos\funcionesextras.cpp
+1719406489 source:c:\users\villa\desktop\c++\gestordearchivos\funcionesextras.cpp
 	<iostream>
 	"FuncionesExtras.h"
 
-1719156590 c:\users\villa\desktop\c++\gestordearchivos\funcionesextras.h
+1719410202 c:\users\villa\desktop\c++\gestordearchivos\funcionesextras.h
 	<iostream>
 	<algorithm>
 	<cctype>
 	<string>
+	<limits>
 
 1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\horario.cpp
 	<iostream>
@@ -1556,7 +1557,7 @@
 	<iostream>
 	<cstring>
 
-1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\producto.cpp
+1719408225 source:c:\users\villa\desktop\c++\gestordearchivos\producto.cpp
 	<iostream>
 	<cstring>
 	"Producto.h"
@@ -1565,7 +1566,7 @@
 	<iostream>
 	"ProductoArchivo.h"
 
-1718900069 source:c:\users\villa\desktop\c++\gestordearchivos\productomanager.cpp
+1719425121 source:c:\users\villa\desktop\c++\gestordearchivos\productomanager.cpp
 	<iostream>
 	<cstdlib>
 	"ProductoManager.h"
@@ -1573,11 +1574,11 @@
 	"FuncionesExtras.h"
 	"CategoriaManager.h"
 
-1716322612 c:\users\villa\desktop\c++\gestordearchivos\sucursalmanager.h
+1719408778 c:\users\villa\desktop\c++\gestordearchivos\sucursalmanager.h
 	"Sucursal.h"
 	"SucursalArchivo.h"
 
-1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\sucursal.cpp
+1719408225 source:c:\users\villa\desktop\c++\gestordearchivos\sucursal.cpp
 	<iostream>
 	<cstring>
 	"Sucursal.h"
@@ -1586,7 +1587,7 @@
 	<iostream>
 	"SucursalArchivo.h"
 
-1716322612 source:c:\users\villa\desktop\c++\gestordearchivos\sucursalmanager.cpp
+1719421424 source:c:\users\villa\desktop\c++\gestordearchivos\sucursalmanager.cpp
 	<iostream>
 	<cstdlib>
 	"SucursalManager.h"
@@ -1600,7 +1601,7 @@
 	<iostream>
 	"UsuarioArchivo.h"
 
-1719156779 source:c:\users\villa\desktop\c++\gestordearchivos\usuariomanager.cpp
+1719426959 source:c:\users\villa\desktop\c++\gestordearchivos\usuariomanager.cpp
 	<iostream>
 	<cstdlib>
 	"UsuarioManager.h"
@@ -1627,7 +1628,7 @@
 	"CierreDeCajaManager.h"
 	"SucursalManager.h"
 
-1719267859 source:c:\users\villa\desktop\c++\gestordearchivos\main.cpp
+1719410911 source:c:\users\villa\desktop\c++\gestordearchivos\main.cpp
 	<iostream>
 	<cstring>
 	"ProductoManager.h"

@@ -12,12 +12,16 @@ class Configuracion{
 
     private:
         char _BkpProducto[30];
+        char _BkpSucursal[30];
+        char _BkpCategoria[30];
         char _BkpVenta[30];
         char _BkpDetalleVenta[30];
         char _BkpCierreDeCaja[30];
-        char _BkpSucursal[30];
-        char _BkpCategoria[30];
         char _BkpUsuario[30];
+
+        char _InicioProducto[30];
+        char _InicioSucursal[30];
+        char _InicioCategoria[30];
 
     public:
 
@@ -44,13 +48,16 @@ class Configuracion{
         void crearBkpCategoria();
         void crearBkpUsuario();
 
+        void restablecerCategoria();
         void restablecerSucursal();
         void restablecerProducto();
         void restablecerVenta();
         void restablecerDetalleVenta();
         void restablecerCierreDeCaja();
-        void restablecerCategoria();
         void restablecerUsuario();
 
-
+        void datosDeInicio();
+        void restablecerCategoriaInicio();
+        void restablecerSucursalInicio();
+        void restablecerProductoInicio();
 };
