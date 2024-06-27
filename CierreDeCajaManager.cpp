@@ -142,13 +142,13 @@ void CierreDeCajaManager::listarVerificados(){
 
 
 void CierreDeCajaManager::facturadoPorMes(){
-    cout<<"ingrese el mes (en numero) "<<endl;
 
-
+    cout<<"Este mes es facturo : "<<endl;
 
     int cant,x;
     CierreDeCaja *vec;
-    cant=cantidadPorMes(6);
+    Fecha hoy;
+    cant=cantidadPorMes(hoy.getMes());
 
     vec=new CierreDeCaja[cant];
 
@@ -157,7 +157,7 @@ void CierreDeCajaManager::facturadoPorMes(){
     }
 
 
-    cargarVecPorMes(6,vec);
+    cargarVecPorMes(hoy.getMes(),vec);
 
     int acum=0;
     for(x=0;x<cant;x++){
@@ -215,7 +215,7 @@ void CierreDeCajaManager::mostrar(CierreDeCaja cierreDeCaja){
 void CierreDeCajaManager::listarPorID(){
     int id;
     cout << "ID de Cierre De Caja a buscar: ";
-    cin >> id;
+    id = pedirNumero();
 
     int pos = _archivo.buscarPosicion(id);
     if (pos >= 0){
@@ -257,7 +257,7 @@ void CierreDeCajaManager::VerificarCierres(){
 
     cout<<"Si ingresa 0 se listaran los cierres sin verificar"<<endl;
 
-    cin>>id;
+    id = pedirNumero();
 
     if(id==0){
 
@@ -265,12 +265,12 @@ void CierreDeCajaManager::VerificarCierres(){
         cout<<"---------------------"<<endl;
         listarNoVerificados();
         cout<<"---------------------"<<endl;
-        cin>>id;
+        id = pedirNumero();
     }
     bool flag=IdDisponible(id);
     while(!flag){
         cout<<"reingrese id"<<endl;
-        cin>>id;
+        id = pedirNumero();
         if(IdDisponible(id)){
             flag=true;
         }
@@ -290,7 +290,7 @@ void CierreDeCajaManager::VerificarCierres(){
 
     cout<<"La facturacion concuerda con el dinero en la caja? (1.si 2.no)"<<endl;
     int opc;
-    cin>>opc;
+    opc = pedirNumero();
 
     if(opc==1){
 
@@ -302,7 +302,7 @@ void CierreDeCajaManager::VerificarCierres(){
         cout<<"Cuanta es la diferencia?"<<endl;
         cout<<"(Si el dinero es menor poner la cantidad en negativo)"<<endl;
         float diferencia;
-        cin>>diferencia;
+        diferencia = pedirNumero();
 
 
         cierre.setDiferencia(diferencia);
@@ -330,7 +330,7 @@ void CierreDeCajaManager::menu(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){

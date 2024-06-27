@@ -18,6 +18,15 @@ class SucursalManager{
         string nombrePorId(int id);
         void bajaLogica();
         int ingresarId();
+
+        void cargarGanancias(int *vec,int tam);
+        void gananciasPorSucursal();
+        void gananciaPorId();
+        void noSuperoGanancia();
+        void superoGanancia();
+        void generoMasGanancias();
+        void generoMenosGanancias();
+
 };
 
 

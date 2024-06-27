@@ -19,6 +19,8 @@ class UsuarioArchivo{
         int buscarPosicion(int dni);
         void vaciarArchivo();
 
+        bool existeDNI(int DNI);
+
 
 };
 

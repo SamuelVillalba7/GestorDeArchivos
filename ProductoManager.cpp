@@ -11,7 +11,7 @@ bool ProductoManager::cargar(){
     Producto aux;
     int id,b,categoria;
     float c,d;
-    string n, nombre;
+    string nombre;
     SucursalManager sm;
     CategoriaManager cm;
 
@@ -34,10 +34,9 @@ bool ProductoManager::cargar(){
     fflush(stdin);
 
     ///
-    getline(cin,n);
-    nombre = fraseMayus(n); //convierte el nombre en mayus;
+    nombre = pedirFrase();
 
-    if (n == "-1") { //en TODO momento; en caso de ingresar un valor menor igual a -1, se cancela la operacion
+    if (nombre == "-1") { //en TODO momento; en caso de ingresar un valor menor igual a -1, se cancela la operacion
         cout << "Operacion de carga cancelada" << endl;
         return false;
     }
@@ -60,7 +59,7 @@ bool ProductoManager::cargar(){
     //categoria
     cout << "Ingrese la Categoria"<<endl;
     cout<<"Si ingresa 0 se listaran las categorias cargadas"<<endl;
-   cin>>categoria;
+    categoria = pedirNumero();
 
     if(categoria==0){
 
@@ -68,12 +67,12 @@ bool ProductoManager::cargar(){
         cout<<"---------------------"<<endl;
         cm.listarTodos();
         cout<<"---------------------"<<endl;
-        cin>>categoria;
+        categoria = pedirNumero();
     }
     bool flag=cm.IdDisponible(categoria);
     while(!flag){
         cout<<"reingrese categoria"<<endl;
-        cin>>categoria;
+        categoria = pedirNumero();
         if(cm.IdDisponible(categoria)){
             flag=true;
         }
@@ -93,7 +92,7 @@ bool ProductoManager::cargar(){
     cout << endl;
 
     cout<<"Ingrese Stock"<<endl;
-    cin>>b;
+    b = pedirNumero();
     if(exitCarga(b)) return false;
     aux.setStock(b);
 
@@ -103,7 +102,7 @@ bool ProductoManager::cargar(){
 
     cout<<"Ingrese precio de compra"<<endl;
     cout<<"$";
-    cin>>c;
+    c = pedirFloat();
 
     if(exitCarga(c)) return false;
     aux.setPrecioCompra(c);
@@ -115,7 +114,7 @@ bool ProductoManager::cargar(){
     cout<<"Ingrese precio de venta"<<endl;
     cout<<"Si ingresa un 0 el precio de venta sera un 35% mas que el de la compra"<<endl;
     cout<<"$";
-    cin>>d;
+    d = pedirFloat();
     if(exitCarga(d)) return false;
 
     //*al poner 0 se guarda el valor de compra mas el 75%*/
@@ -235,7 +234,7 @@ void ProductoManager::listarStockMenor(){
     bool coinc;
     int stockM;
     cout << "Listar productos con stock menor a: ";
-    cin >> stockM;
+    stockM = pedirNumero();
     cout << endl;
     for(int i=0; i<_archivo.contarRegistros(); i++){
         aux = _archivo.leer(i);
@@ -254,7 +253,7 @@ void ProductoManager::listarStockMayor(){
     bool coinc = false;
     int stockM;
     cout << "Listar productos con stock mayor a: ";
-    cin >> stockM;
+    stockM = pedirNumero();
     cout << endl;
     for(int i=0; i<_archivo.contarRegistros(); i++){
         aux = _archivo.leer(i);
@@ -313,7 +312,7 @@ void ProductoManager::ingresoStock(){
 
 
     cout<<"Ingrese la cantidad de stock que ingreso "<<endl;
-    cin>>stock;
+    stock = pedirNumero();
 
     if(stock<=0){
         cout<<"Cantidad no valida"<<endl;
@@ -325,7 +324,7 @@ void ProductoManager::ingresoStock(){
 
 
     cout<<"Ingrese el precio por unidad que ingreso "<<endl;
-        cin>> precioCompra ;
+        precioCompra = pedirFloat();
 
         if(precioCompra<=0){
         cout<<"Precio no valido"<<endl;
@@ -335,7 +334,7 @@ void ProductoManager::ingresoStock(){
 
     cout<<"Ingrese el precio de venta por unidad que ingreso "<<endl;
     cout<<"Si ingresa un 0 el precio de venta sera un 75% mas que el de la compra"<<endl;
-        cin>> precioVenta;
+        precioVenta = pedirFloat();
 
         if(precioVenta<=-1){
         cout<<"Precio no valido"<<endl;
@@ -413,7 +412,7 @@ int ProductoManager::ingresarId(){
 
     int id, pos;
     cout <<"Ingrese el ID del producto"<<endl;
-    cin>> id;
+    id = pedirNumero();
 
 
     pos=_archivo.buscarPosicion(id);
@@ -422,7 +421,7 @@ int ProductoManager::ingresarId(){
         cout<<"------------------------"<<endl;
         cout<<"Ingrese otro id"<<endl;
         cout <<"(Si ingresa -1 saldra de la carga)"<<endl;
-        cin>> id;
+        id = pedirNumero();
 
         if(id == -1){
             return -1;
@@ -467,7 +466,7 @@ void ProductoManager::bajaLogica(){
 
     int opc;
     cout<<"Este producto quiere dar de baja? (1.Si 2.No)"<<endl;
-    cin>>opc;
+    opc= pedirNumero();
 
     if(opc==1){
 
@@ -531,13 +530,37 @@ void ProductoManager::modificarPrecio(){
 
     _archivo.modificar(aux,pos);
 
+}
 
 
+int ProductoManager::devuelveCategoria(int id){
+    Producto aux;
+    ProductoArchivo arch;
+    int pos;
+    pos=arch.buscarPosicion(id);
 
+    aux=arch.leer(pos);
 
-
+    return aux.getCategoria();
 
 }
+
+
+
+int ProductoManager::devuelveGanancia(int id){
+    Producto aux;
+    ProductoArchivo arch;
+    int pos;
+    pos=arch.buscarPosicion(id);
+
+    aux=arch.leer(pos);
+
+    int ganancia= aux.getPrecioVenta() - aux.getPrecioCompra();
+
+    return ganancia;
+
+}
+
 
 
 void ProductoManager::menu(){

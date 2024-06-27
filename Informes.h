@@ -9,6 +9,9 @@
 #include "VentaArchivo.h"
 #include "VentaManager.h"
 #include "CierreDeCajaManager.h"
+#include "CategoriaManager.h"
+#include "SucursalManager.h"
+
 using namespace std;
 
 //Menus:
@@ -19,4 +22,6 @@ public:
     void consultasEmpleados();
     void consultasStock();
     void consultasVenta();
+    void consultasSucursal();
+    void consultasCategoria();
 };

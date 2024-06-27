@@ -49,24 +49,3 @@ void Horario::mostrar(){
 string Horario::toString(){
    return to_string(_hora) + ":" + to_string(_minuto);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

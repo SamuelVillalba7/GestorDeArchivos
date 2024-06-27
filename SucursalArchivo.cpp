@@ -110,6 +110,5 @@ int SucursalArchivo::generarId(){
     else{
         return 1;
     }
-
 }
 

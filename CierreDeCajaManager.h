@@ -2,6 +2,8 @@
 
 #include "CierreDeCaja.h"
 #include "CierreDeCajaArchivo.h"
+#include "FuncionesExtras.h"
+
 class CierreDeCajaManager{
     private:
         CierreDeCajaArchivo _archivo;

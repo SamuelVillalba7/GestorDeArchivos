@@ -17,6 +17,22 @@ class CategoriaManager{
         string nombrePorId(int id);
         void bajaLogica();
         int ingresarId();
+        void masVendida();
+        void menosVendida();
+        void ventasPorCategoria();
+        string devolverNombre(int pos);
+        void cargarCantVentas(int *vecCategorias,int tam);
+        void cargarGanancias(int *vecCategorias,int tam);
+        void recaudadoPorCategoria();
+        void superoVentas();
+        void noSuperoVentas();
+        void generoMasGanancias();
+        void generoMenosGanancias();
+        void superoGanancias();
+        void noSuperoGanancias();
+        void gananciaPorId();
+        void ventaPorId();
+
 
 };
 

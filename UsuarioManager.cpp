@@ -11,6 +11,7 @@ using namespace std;
 #include "CategoriaManager.h"
 #include "FuncionesExtras.h"
 #include "Configuracion.h"
+//#include "UsuarioArchivo.h"
 
 void comprar(Usuario usuario);
 
@@ -31,37 +32,50 @@ bool UsuarioManager::cargar(){
     string nombre,apellido;
     int dni,sector,contrasenia,sucursal;
     SucursalManager sm;
+    bool repetido = true;
 
     cout<<"Ingrese:"<<endl;
 
     cout<<"Nombre: ";
-    cin>>nombre;
+    nombre= pedirFrase();
     usuario.setNombre(nombre);
 
     cout<<"Apellido: ";
-    cin>>apellido;
+    apellido= pedirFrase();
     usuario.setApellido(apellido);
 
     cout<<"Dni: ";
-    dni=validarNumero();
+    while(repetido){
+        fflush(stdin);
+
+        dni= pedirNumero();
+
+        ///dni repetido?
+        if (_archivo.existeDNI(dni)) {
+            cout << "ingrese nuevo dni: ";
+        }
+        else{
+            repetido = false;
+        }
+    }
 
     usuario.setDni(dni);
 
         cout<<"Ingrese la Sucursal"<<endl;
     cout<<"Si ingresa 0 se listaran las sucursales cargadas"<<endl;
 
-    cin>>sucursal;
+    sucursal= pedirNumero();
 
     if(sucursal==0){
         cout<<"---------------------"<<endl;
         sm.listarTodos();
         cout<<"---------------------"<<endl;
-        cin>>sucursal;
+        sucursal = pedirNumero();
     }
     bool flag=sm.IdDisponible(sucursal);
     while(!flag){
         cout<<"reingrese sucursal"<<endl;
-        cin>>sucursal;
+        sucursal= pedirNumero();
         if(sm.IdDisponible(sucursal)){
             flag=true;
         }
@@ -73,12 +87,12 @@ bool UsuarioManager::cargar(){
 
 
     cout<<"Sector: (1.Cajero 2.Deposito 3.Encargado)";
-    cin>>sector;
+    sector = pedirNumero();
     usuario.setSector(sector);
 
 
     cout<<"Contraseña: ";
-    cin>>contrasenia;
+    contrasenia= pedirNumero();
     usuario.setContrasenia(contrasenia);
 
     bool guardo=_archivo.guardar(usuario);
@@ -117,7 +131,7 @@ void UsuarioManager::listarPorDni(){
    int pos,dni;
 
    cout<<"Ingrese el dni"<<endl;
-   cin>>dni;
+   dni= pedirNumero();
    system("cls");
    pos=_archivo.buscarPosicion(dni);
 
@@ -143,7 +157,7 @@ void UsuarioManager::listarPorNombre(){
     bool coincidencia = false;
 
     cout << "Ingrese el nombre a consultar: ";
-    cin >> nombre;
+    nombre= pedirFrase();
     system("cls");
     cant=_archivo.contarRegistros();
     Usuario aux;
@@ -174,7 +188,7 @@ void UsuarioManager::listarPorRol(){
     cout << "1) Cajero" << endl;
     cout << "2) Operario" << endl;
     cout << "3) Encargado" << endl;
-    cin >> rol;
+    rol = pedirNumero();
     system("cls");
     if(rol <=0 || rol >3){
         cout << "ROL INVALIDO" << endl;
@@ -216,7 +230,7 @@ void UsuarioManager::listarPorRol(){
 
     int dni,pos;
     cout<<"Ingrese su dni"<<endl;
-    cin>>dni;
+    dni = pedirNumero();
 
 
     pos=_archivo.buscarPosicion(dni);
@@ -239,7 +253,7 @@ void UsuarioManager::listarPorRol(){
     while(contrasenia!=0){
 
      cout<<"Ingrese su contraseña"<<endl;
-    cin>>contrasenia;
+    contrasenia = pedirNumero();
 
 
     if(contrasenia==aux.getContrasenia()){
@@ -271,7 +285,7 @@ void UsuarioManager::menuInicio(){
         cout<<"0)SALIR"<<endl;
         cout<<"--------------------------------------"<<endl;
         cout<<"INGRESE OPCION"<<endl;
-        cin>>opc;
+        opc  = pedirNumero();
 
 
         system("cls");
@@ -333,6 +347,7 @@ void UsuarioManager::menuInicio(){
     SucursalManager sm;
     CategoriaManager cam;
     Configuracion c;
+    ProductoManager p;
 
     int opcion, aux;
     while (true){
@@ -342,14 +357,15 @@ void UsuarioManager::menuInicio(){
         cout << "1) MENU CIERRE DE CAJA" << endl;
         cout << "2) MENU CATEGORIAS" << endl;
         cout << "3) MENU SUCURSALES" << endl;
-        cout << "4) LISTADO DE INFORMES Y CONSULTAS" << endl;
-        cout << "5) PRODUCTIVIDAD DE EMPLEADOS DE CAJA" << endl;
-        cout << "6) PRODUCTIVIDAD DE EMPLEADOS DE STOCK" << endl;
-        cout << "7) MENU CONFIGURACION" << endl;
+        cout << "4) MENU PRODUCTOS" << endl;
+        cout << "5) LISTADO DE INFORMES Y CONSULTAS" << endl;
+        cout << "6) PRODUCTIVIDAD DE EMPLEADOS DE CAJA" << endl;
+        cout << "7) PRODUCTIVIDAD DE EMPLEADOS DE STOCK" << endl;
+        cout << "8) MENU CONFIGURACION" << endl;
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){
@@ -372,11 +388,18 @@ void UsuarioManager::menuInicio(){
 
             case 4:
                 {
+                   p.menu();
+                }
+                break;
+
+
+            case 5:
+                {
                     im.menuInformes();
                 }
                 break;
 
-                case 7:
+                case 8:
                 {
                     c.menuPrincipal();
                 }
@@ -419,7 +442,7 @@ while(true){
     cout<<"0)SALIR"<<endl;
     cout<<"--------------------------------------"<<endl;
     cout<<"INGRESE OPCION"<<endl;
-    cin>>x;
+    x = pedirNumero();
     system("cls");
 
     switch(x){
@@ -481,7 +504,7 @@ while(true){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){

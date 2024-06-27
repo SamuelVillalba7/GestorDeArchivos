@@ -23,7 +23,7 @@ Venta VentaManager::cargar(){
 
     cout<<"Ingrese la forma de pago"<<endl;
     cout<<"1. Efectivo   "<< "2.Tarjeta"<<endl;
-    cin>>formaDePago;
+    formaDePago= pedirNumero();
     aux.setFormaDePago(formaDePago);
 
      cout<<"Fecha: ";
@@ -59,6 +59,7 @@ void VentaManager::mostrar(Venta aux){
     cout<<"La fecha es : " ;
     aux.getFecha().mostrar();
 
+    cout<<endl;
      cout<<"El horario es : " ;
     aux.getHora().mostrar();
     cout<<endl;
@@ -69,7 +70,7 @@ int VentaManager::listarPorID(){
 
     int id;
     cout << "ID de Venta a buscar: ";
-    cin >> id;
+    id= pedirNumero();
     cout<<endl<<endl;
 
     mostrar(id);
@@ -237,7 +238,7 @@ void VentaManager::menu(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion= pedirNumero();
 
         switch(opcion){
             case 1:

@@ -618,7 +618,7 @@ void Configuracion::menuPrincipal(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){
@@ -677,7 +677,7 @@ void Configuracion::menuCrearBkp(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){
@@ -754,7 +754,7 @@ void Configuracion::menuRestablecer(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){
@@ -845,7 +845,7 @@ void Configuracion::menuVaciarArchivos(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion = pedirNumero();
         system("cls");
 
         switch(opcion){

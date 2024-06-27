@@ -27,6 +27,8 @@ class ProductoManager{
         void bajaLogica();
         void modificarPrecio();
         int ingresarId();
+        int devuelveCategoria(int id);
+        int devuelveGanancia(int id);
 
 };
 

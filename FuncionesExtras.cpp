@@ -1,5 +1,3 @@
-#include <iostream>
-using namespace std;
 #include "FuncionesExtras.h"
 
 
@@ -17,6 +15,15 @@ bool exitCarga(int num){
     }
     return false;
 }
+
+string pedirFrase(){
+    string aux, frase;
+    aux = stringNoVacio();
+    frase = fraseMayus(aux);
+    return frase;
+}
+
+
 
 string fraseMayus(string frase){
     transform(
@@ -43,25 +50,105 @@ void coincidencia(bool coincidencia){
 
 
 int validarNumero(){
-
-     int n=-1;
-
-    while(n == -1){
-
+    int n;
     cin>>n;
 
     if(n==false || n < 0){
-        cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        n=-1;
+        return -1;
+    }
+    return n;
+}
 
-        cout<<"Dato invalido"<<endl;
-        cout<<"Reingrese un numero"<<endl;
+
+string stringNoVacio() {
+    string palabra;
+    while(true) {
+        fflush(stdin);
+        getline(cin, palabra);
+        if (!palabra.empty()) {
+            return palabra;
+        } else {
+            cout << "Ingrese un valor no vacio: ";
+            fflush(stdin);
+        }
+    }
+    return palabra;
+}
+
+int validarPositivo(int num){
+    while(true){
+        if (num < -1) {
+            cout << "Numero negativo no valido. " << endl;
+            num = -2;
+        }
+        else{
+            return num;
+        }
+        return num;
 
     }
+}
 
-   }
 
-    return n;
+int pedirNumero() {
+    int numero;
+    while (true) {
+      //  cout << "Ingrese un numero: ";
+        cin >> numero;
+
+        if (cin.fail()) {
+            cin.clear(); // Limpia el error
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignora el resto de la entrada
+            cout << "Entrada invalida. Ingresar solo numeros. " << endl;
+        } else {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignora el resto de la entrada en caso de caracteres adicionales
+            validarPositivo(numero);
+            if(numero>=-1)
+                break;
+        }
+    }
+    return numero;
+}
+
+float pedirFloat() {
+    float numero;
+    while (true) {
+     //   cout << "Ingrese un numero: ";
+        cin >> numero;
+
+        if (cin.fail()) {
+            cin.clear(); // Limpia el error
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignora el resto de la entrada
+            cout << "Entrada invalida. Ingresar solo numeros. " << endl;
+        } else {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignora el resto de la entrada en caso de caracteres adicionales
+            validarPositivo(numero);
+            if(numero>=-1)
+                break;
+        }
+    }
+    return numero;
+}
+
+float floatPositivo(float num){
+    while(true){
+        if (num < -1) {
+            cout << "Numero negativo no valido. " << endl;
+            num = -2;
+        }
+        else{
+            return num;
+        }
+        return num;
+
+    }
+}
+
+void inicializarVec(int *vec,int tam){
+
+    int x;
+    for(x=0;x<tam;x++){
+        vec[x]=0;
+    }
 
 }

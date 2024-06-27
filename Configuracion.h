@@ -7,6 +7,8 @@
 #include "CierreDeCajaArchivo.h"
 #include "SucursalArchivo.h"
 #include "UsuarioArchivo.h"
+#include "FuncionesExtras.h"
+
 
 class Configuracion{
 

@@ -4,6 +4,8 @@
 #include "DetalleVentaArchivo.h"
 #include "DetalleVenta.h"
 #include "ProductoManager.h"
+#include "FuncionesExtras.h"
+
 
 class DetalleVentaManager{
 

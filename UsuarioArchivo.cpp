@@ -97,3 +97,15 @@ int UsuarioArchivo::buscarPosicion(int dni){
 
 }
 
+bool UsuarioArchivo::existeDNI(int DNI){
+    int cant = contarRegistros();
+    for (int x = 0; x < cant; x++) {
+        Usuario aux = leer(x);
+        if (DNI == aux.getDni()) {
+            cout << "dni ya registrado!" << endl;
+            return true;
+        }
+    }
+    return false;
+}
+

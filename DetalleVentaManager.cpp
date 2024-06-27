@@ -184,7 +184,7 @@ void DetalleVentaManager::menu(){
         cout << "---------------------------" << endl;
         cout << "0) SALIR" << endl;
 
-        cin >> opcion;
+        opcion= pedirNumero();
 
         switch(opcion){
             case 1:
@@ -201,7 +201,7 @@ void DetalleVentaManager::menu(){
                 {
                     int id;
                     cout<<"ingrese id"<<endl;
-                    cin>>id;
+                    id= pedirNumero();
                     listarPorID(id);
                 }
                 break;
